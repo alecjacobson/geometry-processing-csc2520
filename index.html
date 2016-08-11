@@ -57,10 +57,10 @@ worked through the derivations.</p>
 <p>Recent developments in scanning technology have dramatically increased our
 capability to faithfully represent real-world objects virtually. Take the
 Stanford Bunny,</p>
-<center><img src="images/stanfordBunny.jpeg" alt="" /><img src="images/stanfordBunnyCloud.png" alt="" /></center>
+<center><img src="images/stanfordBunny.jpeg" alt="" /><img src="images/stanfordBunnyCloud.jpg" alt="" /></center>
 
 <p>which can be scanned into a cloud of 3D coordinates by a laser scanner. We can then construct the mesh using a standard Poisson Surface Reconstruction to get</p>
-<center><img src="images/reconstructedBunny.png" alt="" /><img src="images/stanfordBunnyMesh.png" alt="" /></center>
+<center><img src="images/reconstructedBunny.jpg" alt="" /><img src="images/stanfordBunnyMesh.jpg" alt="" /></center>
 
 <p>The last image shows the bunny mesh being viewed in <code>libigl</code>. </p>
 
@@ -70,10 +70,10 @@ Stanford Bunny,</p>
 noisy. To illustrate this point, I have artificially introduced random noise to
 the vertices of the bunny mesh. To fix this, I ran one step of implicit mean
 curvature flow to smooth the bunny</p>
-<center><img src="images/noisyBunny.png" alt="" /><img src="images/smoothBunny.png" alt="" /></center>
+<center><img src="images/noisyBunny.jpg" alt="" /><img src="images/smoothBunny.jpg" alt="" /></center>
 
 <p>We can also get carried away and continue smoothing the geometry to get</p>
-<center><img src="images/reallySmoothedBunny.png" alt="" /><img src="images/tooMuchSmoothing.png" alt="" /></center>
+<center><img src="images/reallySmoothedBunny.jpg" alt="" /><img src="images/tooMuchSmoothing.jpg" alt="" /></center>
 
 <h3 id="3.meshsimplification">3. Mesh Simplification</h3>
 
@@ -81,7 +81,7 @@ curvature flow to smooth the bunny</p>
 the complexity of our mesh by representing the geometry with fewer faces. Using
 a greedy algorithm to assign edge collapse weights, we can achieve remarkably
 nice results as shown on this fertility mesh</p>
-<center><img src="images/fertility.png" alt="" /><img src="images/simplifiedFertility.png" alt="" /><img src="images/reallySimplifiedFertility.png" alt="" /><img src="images/simpleFertility.png" alt="" /></center>
+<center><img src="images/fertility.jpg" alt="" /><img src="images/simplifiedFertility.jpg" alt="" /><img src="images/reallySimplifiedFertility.jpg" alt="" /><img src="images/simpleFertility.jpg" alt="" /></center>
 
 <h3 id="4.meshparametrization">4. Mesh Parametrization</h3>
 
@@ -91,21 +91,21 @@ simple technique we can use is to map the boundary to the unit circle and then
 place the remaining vertices within the disk in such a way that we minimize
 displacement. Using the Dirichlet Energy as a measure, we can achieve harmonic
 parametrization of this Lion mesh</p>
-<center><img src="images/lion.png" alt="" /><img src="images/lionPlane.png" alt="" /></center>
+<center><img src="images/lion.jpg" alt="" /><img src="images/lionPlane.jpg" alt="" /></center>
 
 <p>Because we restrict the boundary, this method can cause the parametrization to
 warp angles and areas. Using a Least Squares Conformal Mapping, we can free the
 boundary, show below on the left. Even beyond freeing the boundary, we can come
 up with an As Rigid As Possible parametrization and use LSCM as a starting
 point to improve upon, shown below on the right.</p>
-<center><img src="images/harmonicLion.png" alt="" /><img src="images/arapLion.png" alt="" /></center>
+<center><img src="images/harmonicLion.jpg" alt="" /><img src="images/arapLion.jpg" alt="" /></center>
 
 <p>This parametrization can be used to overlay textures onto the original surface,
 as it is already a planar representation of our three dimensional object.
 Because of our choice of energies and physically based techniques, we can be
 sure to get as little distortion in the mapping as we aimed for angle and area
 preservation.</p>
-<center><img src="images/checkerboardLion.png" alt="" /></center>
+<center><img src="images/checkerboardLion.jpg" alt="" /></center>
 
 <h3 id="5.remeshing">5. Remeshing</h3>
 
@@ -114,14 +114,14 @@ there is no reason to restrict ourselves. In fact, there are sometimes benefits
 to working with quadrilateral meshes instead. Due to this, there is quite a bit
 of literature on developing good remeshing algorithms. Here is an example of
 the transformation from a triangle mesh to a quad mesh</p>
-<center><img src="images/3holes.png" alt="" /><img src="images/remeshedHoles.png" alt="" /></center>
+<center><img src="images/3holes.jpg" alt="" /><img src="images/remeshedHoles.jpg" alt="" /></center>
 
 <h3 id="6.visualizingmeshfeatures">6. Visualizing Mesh Features</h3>
 
 <p>The automatic detection of mesh features like symmetry, curvature, and
 spin-axes are also useful tools for mesh analysis. Here is a plot of elliptic,
 hyperbolic, and parabolic curvature on a bumpy square mesh</p>
-<center> <img src="images/curvature.png" alt="" /> </center>
+<center> <img src="images/curvature.jpg" alt="" /> </center>
 
 <h3 id="7.deformations">7. Deformations</h3>
 
@@ -133,7 +133,7 @@ Creating physically plausible deformations of characters is a challenging task,
 and often sophisticated mathematical concepts are hidden behind simple uses
 interfaces. Here&#8217;s a deformation of a knight character using an As Rigid As
 Possible scheme</p>
-<center><img src="images/knight.png" alt="" /><img src="images/deformedKnight.png" alt="" /></center>
+<center><img src="images/knight.jpg" alt="" /><img src="images/deformedKnight.jpg" alt="" /></center>
 
 <h3 id="amathematicalfoundation">A Mathematical Foundation</h3>
 
