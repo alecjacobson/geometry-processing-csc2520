@@ -50,11 +50,11 @@ Recent developments in scanning technology have dramatically increased our
 capability to faithfully represent real-world objects virtually. Take the
 Stanford Bunny,
 
-<center>![](images/stanfordBunny.jpeg)![](images/stanfordBunnyCloud.png)</center>
+<center>![](images/stanfordBunny.jpeg)![](images/stanfordBunnyCloud.jpg)</center>
 
 which can be scanned into a cloud of 3D coordinates by a laser scanner. We can then construct the mesh using a standard Poisson Surface Reconstruction to get
 
-<center>![](images/reconstructedBunny.png)![](images/stanfordBunnyMesh.png)</center> 
+<center>![](images/reconstructedBunny.jpg)![](images/stanfordBunnyMesh.jpg)</center> 
 
 The last image shows the bunny mesh being viewed in `libigl`. 
 
@@ -65,11 +65,11 @@ noisy. To illustrate this point, I have artificially introduced random noise to
 the vertices of the bunny mesh. To fix this, I ran one step of implicit mean
 curvature flow to smooth the bunny
 
-<center>![](images/noisyBunny.png)![](images/smoothBunny.png)</center> 
+<center>![](images/noisyBunny.jpg)![](images/smoothBunny.jpg)</center> 
 
 We can also get carried away and continue smoothing the geometry to get
 
-<center>![](images/reallySmoothedBunny.png)![](images/tooMuchSmoothing.png)</center>
+<center>![](images/reallySmoothedBunny.jpg)![](images/tooMuchSmoothing.jpg)</center>
 
 ### 3\. Mesh Simplification
 
@@ -78,7 +78,7 @@ the complexity of our mesh by representing the geometry with fewer faces. Using
 a greedy algorithm to assign edge collapse weights, we can achieve remarkably
 nice results as shown on this fertility mesh
 
-<center>![](images/fertility.png)![](images/simplifiedFertility.png)![](images/reallySimplifiedFertility.png)![](images/simpleFertility.png)</center>
+<center>![](images/fertility.jpg)![](images/simplifiedFertility.jpg)![](images/reallySimplifiedFertility.jpg)![](images/simpleFertility.jpg)</center>
 
 ### 4\. Mesh Parametrization
 
@@ -89,7 +89,7 @@ place the remaining vertices within the disk in such a way that we minimize
 displacement. Using the Dirichlet Energy as a measure, we can achieve harmonic
 parametrization of this Lion mesh
 
-<center>![](images/lion.png)![](images/lionPlane.png)</center>
+<center>![](images/lion.jpg)![](images/lionPlane.jpg)</center>
 
 Because we restrict the boundary, this method can cause the parametrization to
 warp angles and areas. Using a Least Squares Conformal Mapping, we can free the
@@ -97,7 +97,7 @@ boundary, show below on the left. Even beyond freeing the boundary, we can come
 up with an As Rigid As Possible parametrization and use LSCM as a starting
 point to improve upon, shown below on the right.
 
-<center>![](images/harmonicLion.png)![](images/arapLion.png)</center>
+<center>![](images/harmonicLion.jpg)![](images/arapLion.jpg)</center>
 
 This parametrization can be used to overlay textures onto the original surface,
 as it is already a planar representation of our three dimensional object.
@@ -105,7 +105,7 @@ Because of our choice of energies and physically based techniques, we can be
 sure to get as little distortion in the mapping as we aimed for angle and area
 preservation.
 
-<center>![](images/checkerboardLion.png)</center>
+<center>![](images/checkerboardLion.jpg)</center>
 
 ### 5\. Remeshing
 
@@ -115,7 +115,7 @@ to working with quadrilateral meshes instead. Due to this, there is quite a bit
 of literature on developing good remeshing algorithms. Here is an example of
 the transformation from a triangle mesh to a quad mesh
 
-<center>![](images/3holes.png)![](images/remeshedHoles.png)</center>
+<center>![](images/3holes.jpg)![](images/remeshedHoles.jpg)</center>
 
 ### 6\. Visualizing Mesh Features
 
@@ -123,7 +123,7 @@ The automatic detection of mesh features like symmetry, curvature, and
 spin-axes are also useful tools for mesh analysis. Here is a plot of elliptic,
 hyperbolic, and parabolic curvature on a bumpy square mesh
 
-<center> ![](images/curvature.png) </center>
+<center> ![](images/curvature.jpg) </center>
 
 ### 7\. Deformations
 
@@ -136,7 +136,7 @@ and often sophisticated mathematical concepts are hidden behind simple uses
 interfaces. Here's a deformation of a knight character using an As Rigid As
 Possible scheme
 
-<center>![](images/knight.png)![](images/deformedKnight.png)</center>
+<center>![](images/knight.jpg)![](images/deformedKnight.jpg)</center>
 
 ### A Mathematical Foundation
 
