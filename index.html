@@ -50,7 +50,7 @@ The last image shows the bunny mesh being viewed in <code>libigl</code>. <p></p>
 
 <h3 id="2-surface-fairing-and-denoising">2. Surface Fairing and Denoising</h3>
 
-<p>If the scan was not so good, it is possible that the final mesh surface is noisy. To illustrate this point, Iâ€™ve artificially introduced random noise to the vertices of the bunny mesh. To fix this, I ran one step of implicit mean curvature flow to smooth the bunny <br>
+<p>If the scan was not so good, it is possible that the final mesh surface is noisy. To illustrate this point, I've artificially introduced random noise to the vertices of the bunny mesh. To fix this, I ran one step of implicit mean curvature flow to smooth the bunny <br>
 </p><center><img src="http://www.columbia.edu/~kq2129/images/noisyBunny.png" height="300" width="300"><img src="http://www.columbia.edu/~kq2129/images/smoothBunny.png" height="300" width="300"></center> <br>
 We can also get carried away and continue smoothing the geometry to get<p></p>
 
@@ -76,7 +76,7 @@ We can also get carried away and continue smoothing the geometry to get<p></p>
 
 <h3 id="5-remeshing">5. Remeshing</h3>
 
-<p>Even though it may seem like triangle meshes are in fact all we ever work with, thereâ€™s no reason to restrict ourselves. In fact, there are sometimes benefits to working with quadrilateral meshes instead. Due to this, there is quite a bit of literature on developing good remeshing algorithms. Here is an example of the transformation from a triangle mesh to a quad mesh</p>
+<p>Even though it may seem like triangle meshes are in fact all we ever work with, there's no reason to restrict ourselves. In fact, there are sometimes benefits to working with quadrilateral meshes instead. Due to this, there is quite a bit of literature on developing good remeshing algorithms. Here is an example of the transformation from a triangle mesh to a quad mesh</p>
 
 <p></p><center><img src="http://www.columbia.edu/~kq2129/images/3holes.png" height="300" width="450"> <br>
 <center> <br>
@@ -96,7 +96,7 @@ We can also get carried away and continue smoothing the geometry to get<p></p>
 
 <h3 id="7-deformations">7. Deformations</h3>
 
-<p>Mesh deformation techniques allow users to create new meshes by deforming existing ones. This has especially important implications for character animations. Handle-based deformations allow users to specify the positions of a few predetermined handle points and allows the algorithm to deduce the rest. Creating physically plausible deformations of characters is a challenging task, and often sophisticated mathematical concepts are hidden behind simple uses interfaces. Hereâ€™s a deformation of a knight character using an As Rigid As Possible scheme</p>
+<p>Mesh deformation techniques allow users to create new meshes by deforming existing ones. This has especially important implications for character animations. Handle-based deformations allow users to specify the positions of a few predetermined handle points and allows the algorithm to deduce the rest. Creating physically plausible deformations of characters is a challenging task, and often sophisticated mathematical concepts are hidden behind simple uses interfaces. Here's a deformation of a knight character using an As Rigid As Possible scheme</p>
 
 <p></p><center><img src="http://www.columbia.edu/~kq2129/images/knight.png" height="400" width="250"><img src="http://www.columbia.edu/~kq2129/images/deformedKnight.png" height="400" width="250"></center><p></p>
 
