@@ -42,34 +42,64 @@ worked through the derivations.
  worrying about the grunt-work of
  [OpenGL](https://en.wikipedia.org/wiki/OpenGL) viewers, quadrature, etc.
 
+## Prerequisites
+
+Students should have already taken **Linear Algebra** and **Calculus**.
+
+Students should have already taken **Introduction to Computer Science** and
+should be _proficient_ in computer programming (in any language) and should
+feel comfortable programming in **C++**.
+
+While knowledge of **Partial Differential Equations** _is not required_, it will
+certainly be very handy for derivations. A quick survey will be posted to help
+students evaluate their readiness on these topics.
+
+On the programming side, we will be coding mainly in **C++** and using a
+miniature version of [libigl](http://libigl.github.io/libigl/), an open-source
+geometry processing library. We will be using
+[Eigen](http://eigen.tuxfamily.org) for computational linear algebra, and
+[Cmake](http://cmake.org) for building the coding assignments.
+
 ## Topics
 
 ### 1\. Acquisition and Reconstruction
 
 Recent developments in scanning technology have dramatically increased our
 capability to faithfully represent real-world objects virtually. Take the
-Stanford Bunny,
+Stanford Bunny, which can be scanned into a cloud of 3D coordinates by a laser scanner. 
 
-<center>![](images/stanfordBunny.jpeg)![](images/stanfordBunnyCloud.jpg)</center>
+![Consider a physical sculpture of a bunny made out of ceramic.](images/stanfordBunny.jpeg)
 
-which can be scanned into a cloud of 3D coordinates by a laser scanner. We can then construct the mesh using a standard Poisson Surface Reconstruction to get
+![A laser scan of the bunny recreates the shape virtually as a cloud of points.](images/stanfordBunnyCloud.jpg)
 
-<center>![](images/reconstructedBunny.jpg)![](images/stanfordBunnyMesh.jpg)</center> 
 
-The last image shows the bunny mesh being viewed in `libigl`. 
+We can convert the loose set of points into a closed surface composed of many
+small triangles, a triangle mesh. Triangle meshes are the most popular discrete representation for continuous
+surfaces on the computer. We can save the mesh to a file and load it into other
+programs, for example [libigl](http://libigl.github.io/libigl/)'s viewer:
+
+![The loose set of points is converted to a closed surface mesh.](images/reconstructedBunny.jpg)
+
+![ [libigl](http://libigl.github.io/libigl/)'s viewer renders the same bunny.](images/stanfordBunnyMesh.jpg)
 
 ### 2\. Surface Fairing and Denoising
 
-If the scan was not so good, it is possible that the final mesh surface is
-noisy. To illustrate this point, I have artificially introduced random noise to
-the vertices of the bunny mesh. To fix this, I ran one step of implicit mean
-curvature flow to smooth the bunny
+If the scan was not so good, it is possible that the reconstructed mesh surface
+is noisy. To illustrate this point, I have artificially introduced random noise
+to the vertices of the bunny mesh. To fix this, I ran one step of implicit mean
+curvature flow to smooth the bunny.
 
-<center>![](images/noisyBunny.jpg)![](images/smoothBunny.jpg)</center> 
+![The bunny is corrupted by noise.](images/noisyBunny.jpg)
 
-We can also get carried away and continue smoothing the geometry to get
+![Flowing the surface smooths out the noise.](images/smoothBunny.jpg)
 
-<center>![](images/reallySmoothedBunny.jpg)![](images/tooMuchSmoothing.jpg)</center>
+
+Continuing to smooth the bunny has an interesting effect. Eventually even low
+frequency details disappear. And finally the bunny simply becomes a sphere.
+
+![The bunny loses low frequency details.](images/reallySmoothedBunny.jpg)
+
+![The bunny has become a simple sphere.](images/tooMuchSmoothing.jpg)
 
 ### 3\. Mesh Simplification
 
@@ -78,7 +108,14 @@ the complexity of our mesh by representing the geometry with fewer faces. Using
 a greedy algorithm to assign edge collapse weights, we can achieve remarkably
 nice results as shown on this fertility mesh
 
-<center>![](images/fertility.jpg)![](images/simplifiedFertility.jpg)![](images/reallySimplifiedFertility.jpg)![](images/simpleFertility.jpg)</center>
+![The input Fertility model.](images/fertility.jpg)
+
+![Mesh simplification maintains the geometry but removes triangles.](images/simplifiedFertility.jpg)
+
+![Further simplification can style maintain the shape but small artifacts
+appear.](images/reallySimplifiedFertility.jpg)
+
+![Major simplification only captures the large features of the shape.](images/simpleFertility.jpg)
 
 ### 4\. Mesh Parametrization
 
@@ -138,7 +175,7 @@ Possible scheme
 
 <center>![](images/knight.jpg)![](images/deformedKnight.jpg)</center>
 
-### A Mathematical Foundation
+## A Mathematical Foundation
 
 Much of the framing for our techniques will be looking at the continuous
 analogue of our problem and discretizing it in an intrinsic way, preserving
@@ -149,19 +186,7 @@ surprisingly we will see that there are many choices of discretization, each
 with their own benefits and downsides, prompting us to choose appropriately for
 the particular application.
 
-### Prerequisites
-
-Students should be comfortable with Linear Algebra and Multivariable Calculus,
-and while knowledge of Partial Differential Equations is not required, it will
-certainly be very handy for derivations. A quick survey will be posted to help
-students evaluate their readiness on these topics.
-
-On the programming side, we will be coding mainly in `C++` and using a
-miniature version of `Libigl`, an open-source geometry processing library. We
-will be using `Eigen` for computational linear algebra, and `Cmake` for linking
-and developing executables.
-
-### Supplemental Textbook
+## Supplemental Textbook
 
 [_Polygon Mesh
 Processing_](https://www.amazon.ca/Polygon-Mesh-Processing-Mario-Botsch/dp/1568814267/).

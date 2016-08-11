@@ -31,8 +31,14 @@ body
   font-size: 10pt;
   background-color: #fff;
   margin:0px auto;
-  text-align: justify;
+  text-align: center; /* for aligning display-inline figures */
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  counter-reset: figures; 
+}
+
+h1,h2,h3,h4,p,li,div
+{
+  text-align: justify;
 }
 
 
@@ -57,12 +63,28 @@ body
 
 img
 {
-  max-width: 100%;
+  height: 220px;
+}
+
+figure
+{
+  display: inline-block;
+  vertical-align: top;
+  width: 45%; 
+  margin: 0 auto;
+  border: 5px solid #FFF;
 }
 
 figcaption
 {
   font-style: italic;
+  text-align: left;
+}
+figcaption::before
+{
+  counter-increment: figures; 
+  font-weight: bold;
+  content: "Figure "  counter(figures) ": ";
 }
 
 pre, code {
@@ -276,11 +298,6 @@ div.footnotes hr
 {
   border: 0;
 }
-
-/*
-p { page-break-inside: avoid;  } 
-figure { page-break-inside: avoid;  } 
-*/
 
 .footnotes b
 {

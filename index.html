@@ -50,30 +50,86 @@ worked through the derivations.</p>
  <a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a> viewers, quadrature, etc.</li>
 </ol>
 
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Students should have already taken <strong>Linear Algebra</strong> and <strong>Calculus</strong>.</p>
+
+<p>Students should have already taken <strong>Introduction to Computer Science</strong> and
+should be <em>proficient</em> in computer programming (in any language) and should
+feel comfortable programming in <strong>C++</strong>.</p>
+
+<p>While knowledge of <strong>Partial Differential Equations</strong> <em>is not required</em>, it will
+certainly be very handy for derivations. A quick survey will be posted to help
+students evaluate their readiness on these topics.</p>
+
+<p>On the programming side, we will be coding mainly in <strong>C++</strong> and using a
+miniature version of <a href="http://libigl.github.io/libigl/">libigl</a>, an open-source
+geometry processing library. We will be using
+<a href="http://eigen.tuxfamily.org">Eigen</a> for computational linear algebra, and
+<a href="http://cmake.org">Cmake</a> for building the coding assignments.</p>
+
 <h2 id="topics">Topics</h2>
 
 <h3 id="1.acquisitionandreconstruction">1. Acquisition and Reconstruction</h3>
 
 <p>Recent developments in scanning technology have dramatically increased our
 capability to faithfully represent real-world objects virtually. Take the
-Stanford Bunny,</p>
-<center><img src="images/stanfordBunny.jpeg" alt="" /><img src="images/stanfordBunnyCloud.jpg" alt="" /></center>
+Stanford Bunny, which can be scanned into a cloud of 3D coordinates by a laser scanner. </p>
 
-<p>which can be scanned into a cloud of 3D coordinates by a laser scanner. We can then construct the mesh using a standard Poisson Surface Reconstruction to get</p>
-<center><img src="images/reconstructedBunny.jpg" alt="" /><img src="images/stanfordBunnyMesh.jpg" alt="" /></center>
+<figure>
+<img src="images/stanfordBunny.jpeg" alt="Consider a physical sculpture of a bunny made out of ceramic." />
+<figcaption>Consider a physical sculpture of a bunny made out of ceramic.</figcaption>
+</figure>
 
-<p>The last image shows the bunny mesh being viewed in <code>libigl</code>. </p>
+<figure>
+<img src="images/stanfordBunnyCloud.jpg" alt="A laser scan of the bunny recreates the shape virtually as a cloud of points." />
+<figcaption>A laser scan of the bunny recreates the shape virtually as a cloud of points.</figcaption>
+</figure>
+
+<p>We can convert the loose set of points into a closed surface composed of many
+small triangles, a triangle mesh. Triangle meshes are the most popular discrete representation for continuous
+surfaces on the computer. We can save the mesh to a file and load it into other
+programs, for example <a href="http://libigl.github.io/libigl/">libigl</a>&#8217;s viewer:</p>
+
+<figure>
+<img src="images/reconstructedBunny.jpg" alt="The loose set of points is converted to a closed surface mesh." />
+<figcaption>The loose set of points is converted to a closed surface mesh.</figcaption>
+</figure>
+
+<figure>
+<img src="images/stanfordBunnyMesh.jpg" alt=" libigl's viewer renders the same bunny." />
+<figcaption> <a href="http://libigl.github.io/libigl/">libigl</a>&#8217;s viewer renders the same bunny.</figcaption>
+</figure>
 
 <h3 id="2.surfacefairinganddenoising">2. Surface Fairing and Denoising</h3>
 
-<p>If the scan was not so good, it is possible that the final mesh surface is
-noisy. To illustrate this point, I have artificially introduced random noise to
-the vertices of the bunny mesh. To fix this, I ran one step of implicit mean
-curvature flow to smooth the bunny</p>
-<center><img src="images/noisyBunny.jpg" alt="" /><img src="images/smoothBunny.jpg" alt="" /></center>
+<p>If the scan was not so good, it is possible that the reconstructed mesh surface
+is noisy. To illustrate this point, I have artificially introduced random noise
+to the vertices of the bunny mesh. To fix this, I ran one step of implicit mean
+curvature flow to smooth the bunny.</p>
 
-<p>We can also get carried away and continue smoothing the geometry to get</p>
-<center><img src="images/reallySmoothedBunny.jpg" alt="" /><img src="images/tooMuchSmoothing.jpg" alt="" /></center>
+<figure>
+<img src="images/noisyBunny.jpg" alt="The bunny is corrupted by noise." />
+<figcaption>The bunny is corrupted by noise.</figcaption>
+</figure>
+
+<figure>
+<img src="images/smoothBunny.jpg" alt="Flowing the surface smooths out the noise." />
+<figcaption>Flowing the surface smooths out the noise.</figcaption>
+</figure>
+
+<p>Continuing to smooth the bunny has an interesting effect. Eventually even low
+frequency details disappear. And finally the bunny simply becomes a sphere.</p>
+
+<figure>
+<img src="images/reallySmoothedBunny.jpg" alt="The bunny loses low frequency details." />
+<figcaption>The bunny loses low frequency details.</figcaption>
+</figure>
+
+<figure>
+<img src="images/tooMuchSmoothing.jpg" alt="The bunny has become a simple sphere." />
+<figcaption>The bunny has become a simple sphere.</figcaption>
+</figure>
 
 <h3 id="3.meshsimplification">3. Mesh Simplification</h3>
 
@@ -81,7 +137,28 @@ curvature flow to smooth the bunny</p>
 the complexity of our mesh by representing the geometry with fewer faces. Using
 a greedy algorithm to assign edge collapse weights, we can achieve remarkably
 nice results as shown on this fertility mesh</p>
-<center><img src="images/fertility.jpg" alt="" /><img src="images/simplifiedFertility.jpg" alt="" /><img src="images/reallySimplifiedFertility.jpg" alt="" /><img src="images/simpleFertility.jpg" alt="" /></center>
+
+<figure>
+<img src="images/fertility.jpg" alt="The input Fertility model." />
+<figcaption>The input Fertility model.</figcaption>
+</figure>
+
+<figure>
+<img src="images/simplifiedFertility.jpg" alt="Mesh simplification maintains the geometry but removes triangles." />
+<figcaption>Mesh simplification maintains the geometry but removes triangles.</figcaption>
+</figure>
+
+<figure>
+<img src="images/reallySimplifiedFertility.jpg" alt="Further simplification can style maintain the shape but small artifacts
+appear." />
+<figcaption>Further simplification can style maintain the shape but small artifacts
+appear.</figcaption>
+</figure>
+
+<figure>
+<img src="images/simpleFertility.jpg" alt="Major simplification only captures the large features of the shape." />
+<figcaption>Major simplification only captures the large features of the shape.</figcaption>
+</figure>
 
 <h3 id="4.meshparametrization">4. Mesh Parametrization</h3>
 
@@ -135,7 +212,7 @@ interfaces. Here&#8217;s a deformation of a knight character using an As Rigid A
 Possible scheme</p>
 <center><img src="images/knight.jpg" alt="" /><img src="images/deformedKnight.jpg" alt="" /></center>
 
-<h3 id="amathematicalfoundation">A Mathematical Foundation</h3>
+<h2 id="amathematicalfoundation">A Mathematical Foundation</h2>
 
 <p>Much of the framing for our techniques will be looking at the continuous
 analogue of our problem and discretizing it in an intrinsic way, preserving
@@ -146,19 +223,7 @@ surprisingly we will see that there are many choices of discretization, each
 with their own benefits and downsides, prompting us to choose appropriately for
 the particular application.</p>
 
-<h3 id="prerequisites">Prerequisites</h3>
-
-<p>Students should be comfortable with Linear Algebra and Multivariable Calculus,
-and while knowledge of Partial Differential Equations is not required, it will
-certainly be very handy for derivations. A quick survey will be posted to help
-students evaluate their readiness on these topics.</p>
-
-<p>On the programming side, we will be coding mainly in <code>C++</code> and using a
-miniature version of <code>Libigl</code>, an open-source geometry processing library. We
-will be using <code>Eigen</code> for computational linear algebra, and <code>Cmake</code> for linking
-and developing executables.</p>
-
-<h3 id="supplementaltextbook">Supplemental Textbook</h3>
+<h2 id="supplementaltextbook">Supplemental Textbook</h2>
 
 <p><a href="https://www.amazon.ca/Polygon-Mesh-Processing-Mario-Botsch/dp/1568814267/"><em>Polygon Mesh
 Processing</em></a>.
