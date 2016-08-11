@@ -1,0 +1,59 @@
+BODY
+{
+  FONT-SIZE: 12px;
+  BACKGROUND: #484848;
+    overflow: auto;
+    padding: 0;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-right: 20%;
+    margin-bottom: 1%;
+  COLOR: #ffffff;
+  FONT-FAMILY: Verdana, Helvetica
+}
+TABLE
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Verdana, Helvetica
+}
+H2
+{
+    FONT-SIZE: 24px;
+    FONT-FAMILY: Verdana, Helvetica
+}
+H3
+{
+    FONT-SIZE: 18px;
+    FONT-FAMILY: Verdana, Helvetica
+}
+H4
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Verdana, Helvetica
+}
+
+a:link {
+    color: #ffffff;
+    text-decoration: underline;
+}
+a:visited {
+    color: #ffffff;
+    text-decoration: underline;
+}
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+body {
+    text-align: justify;
+    text-justify: inter-word;
+}
+img.resize{
+    width:50%; /* you can use % */
+    height: auto;
+}
+td.spacer {width: 2%;}
