@@ -1,123 +1,168 @@
-<html><head><!-- -*- Mode: html-helper -*- -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Geometry Processing</title>
-    <!-- <link rel="stylesheet" href="style.css" type="text/css" /> -->
-    <style type="text/css">
-  <!--
-  .style1 {color: #FF0000}
-  -->
-  </style>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Geometry Processing Course</title>
+	<meta name="author" content="Klint Qinami, Alec Jacobson"/>
+<link rel="stylesheet" href=style.css>
 </head>
+<body>
 
-<body alink="#ffffff" bgcolor="#404040" link="#ffffff" text="#ffffff" vlink="#9999ff">
+<h1 id="geometryprocessing">Geometry Processing</h1>
 
-<h1 id="geometry-processing-coming-soon">Geometry Processing (coming soon)</h1>
+<p>Winter Term 2017<br/>
+CSC2521 [Topics in Computer Graphics: Geometry Processing]<br/>
+Prof. Alec Jacobson </p>
 
+<p><em>This course page is a work in progress. Stay tuned.</em></p>
 
-
-<h2 id="description">Description</h2>
-
-<p>As a course, geometry processing focuses on developing and implementing mathematically derived algorithms to manipulate virtual geometrical models. Engineers, computer scientists, artists, physicists,  architects, neuroscientists, and curious students alike need these algorithms to be robust, efficient, and visually pleasing. Even with such a variety of users processing mesh geometry, there is a common user pipeline that emerges, and this course will focus particularly on developing a cohesive understanding of each stage of the pipeline. </p>
-
-
+<p>This geometry processing course focuses on developing and implementing
+mathematically derived algorithms to manipulate virtual geometrical models.
+Engineers, computer scientists, artists, physicists, architects,
+neuroscientists, and curious students alike need these algorithms to be robust,
+efficient, and visually pleasing. Even with such a variety of users processing
+mesh geometry, there is a common user pipeline that emerges, and this course
+will focus particularly on developing a cohesive understanding of each stage of
+the pipeline.</p>
 
 <h2 id="organization">Organization</h2>
 
-<p>Students will attend lectures where exposition and mathematical derivations are given, and are expected to complete weekly programming assignments implementing derived algorithms. By the end of the semester, they should be able to have a finalized creative piece of geometry that they can 3D print or use virtually, utilizing their newly developed toolset. There also may be a short in-class exam that should be relatively easy for students who attended lecture and worked through the derivations.</p>
-
-
+<p>Students will attend lectures where exposition and mathematical derivations are
+given, and are expected to complete weekly programming assignments implementing
+derived algorithms. By the end of the semester, they should be able to have a
+finalized creative piece of geometry that they can 3D print or use virtually,
+utilizing their newly developed toolset. There also may be a short in-class
+exam that should be relatively easy for students who attended lecture and
+worked through the derivations.</p>
 
 <h2 id="objectives">Objectives</h2>
 
 <ol>
-<li>Students should understand, derive, and implement solutions to the prominent challenges that arise in geometry processing applications.</li>
-<li>Students should create a final creative project showcasing their implementation of the different processing algorithms.</li>
-<li>Students should develop an understanding of the mathematical underpinnings of geometry processing including useful discretized operators and energies.</li>
-<li>Students should develop a working knowledge of <code>Libigl</code> to develop these algorithms without worrying about the grunt-work of <code>OpenGL</code> viewers, quadrature, etc.</li>
+<li>Students should understand, derive, and implement solutions to the
+ prominent challenges that arise in geometry processing applications.</li>
+<li>Students should create a final creative project showcasing their
+ implementation of the different processing algorithms.</li>
+<li>Students should develop an understanding of the mathematical underpinnings
+ of geometry processing including useful discretized operators and energies.</li>
+<li>Students should develop a working knowledge of
+ <a href="http://libigl.github.io/libigl/">libigl</a> to develop these algorithms without
+ worrying about the grunt-work of
+ <a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a> viewers, quadrature, etc.</li>
 </ol>
 
 <h2 id="topics">Topics</h2>
 
-<h3 id="1-acquisition-and-reconstruction">1.  Acquisition and Reconstruction</h3>
+<h3 id="1.acquisitionandreconstruction">1. Acquisition and Reconstruction</h3>
 
-<p>Recent developments in scanning technology have dramatically increased our capability to faithfully represent real-world objects virtually. Take the Stanford Bunny,</p>
+<p>Recent developments in scanning technology have dramatically increased our
+capability to faithfully represent real-world objects virtually. Take the
+Stanford Bunny,</p>
+<center><img src="images/stanfordBunny.jpeg" alt="" /><img src="images/stanfordBunnyCloud.png" alt="" /></center>
 
-<p></p><center><img src="http://www.columbia.edu/~kq2129/images/stanfordBunny.jpeg" height="300" width="300"><img src="http://www.columbia.edu/~kq2129/images/stanfordBunnyCloud.png" height="300" width="300"></center><p></p>
+<p>which can be scanned into a cloud of 3D coordinates by a laser scanner. We can then construct the mesh using a standard Poisson Surface Reconstruction to get</p>
+<center><img src="images/reconstructedBunny.png" alt="" /><img src="images/stanfordBunnyMesh.png" alt="" /></center>
 
-<p>which can be scanned into a cloud of 3D coordinates by a laser scanner. We can then construct the mesh using a standard Poisson Surface Reconstruction to get  <br>
-</p><center><img src="http://www.columbia.edu/~kq2129/images/reconstructedBunny.png" height="300" width="300"><img src="http://www.columbia.edu/~kq2129/images/stanfordBunnyMesh.png" height="300" width="300"></center> <br>
-The last image shows the bunny mesh being viewed in <code>libigl</code>. <p></p>
+<p>The last image shows the bunny mesh being viewed in <code>libigl</code>. </p>
 
-<h3 id="2-surface-fairing-and-denoising">2. Surface Fairing and Denoising</h3>
+<h3 id="2.surfacefairinganddenoising">2. Surface Fairing and Denoising</h3>
 
-<p>If the scan was not so good, it is possible that the final mesh surface is noisy. To illustrate this point, Iâ€™ve artificially introduced random noise to the vertices of the bunny mesh. To fix this, I ran one step of implicit mean curvature flow to smooth the bunny <br>
-</p><center><img src="http://www.columbia.edu/~kq2129/images/noisyBunny.png" height="300" width="300"><img src="http://www.columbia.edu/~kq2129/images/smoothBunny.png" height="300" width="300"></center> <br>
-We can also get carried away and continue smoothing the geometry to get<p></p>
+<p>If the scan was not so good, it is possible that the final mesh surface is
+noisy. To illustrate this point, I have artificially introduced random noise to
+the vertices of the bunny mesh. To fix this, I ran one step of implicit mean
+curvature flow to smooth the bunny</p>
+<center><img src="images/noisyBunny.png" alt="" /><img src="images/smoothBunny.png" alt="" /></center>
 
-<p></p><center><img src="http://www.columbia.edu/~kq2129/images/reallySmoothedBunny.png" height="300" width="300"><img src="http://www.columbia.edu/~kq2129/images/tooMuchSmoothing.png" height="300" width="300"></center><p></p>
+<p>We can also get carried away and continue smoothing the geometry to get</p>
+<center><img src="images/reallySmoothedBunny.png" alt="" /><img src="images/tooMuchSmoothing.png" alt="" /></center>
 
-<h3 id="3-mesh-simplification">3. Mesh Simplification</h3>
+<h3 id="3.meshsimplification">3. Mesh Simplification</h3>
 
-<p>Some algorithms demand such computing power that it may be reasonable to reduce the complexity of our mesh by representing the geometry with fewer faces. Using a greedy algorithm to assign edge collapse weights, we can achieve remarkably nice results as shown on this fertility mesh <br>
-</p><center><img src="http://www.columbia.edu/~kq2129/images/fertility.png" height="300" width="300"><img src="http://www.columbia.edu/~kq2129/images/simplifiedFertility.png" height="300" width="300"><img src="http://www.columbia.edu/~kq2129/images/reallySimplifiedFertility.png" height="300" width="300"><img src="http://www.columbia.edu/~kq2129/images/simpleFertility.png" height="300" width="300"></center><p></p>
+<p>Some algorithms demand such computing power that it may be reasonable to reduce
+the complexity of our mesh by representing the geometry with fewer faces. Using
+a greedy algorithm to assign edge collapse weights, we can achieve remarkably
+nice results as shown on this fertility mesh</p>
+<center><img src="images/fertility.png" alt="" /><img src="images/simplifiedFertility.png" alt="" /><img src="images/reallySimplifiedFertility.png" alt="" /><img src="images/simpleFertility.png" alt="" /></center>
 
-<h3 id="4-mesh-parametrization">4. Mesh Parametrization</h3>
+<h3 id="4.meshparametrization">4. Mesh Parametrization</h3>
 
-<p>Remarkably, using the smoothing machinery and tweaking a bit, we can create 2D parametrizations for our 3D surfaces. If we have a mesh with a boundary, one simple technique we can use is to map the boundary to the unit circle and then place the remaining vertices within the disk in such a way that we minimize displacement. Using the Dirichlet Energy as a measure, we can achieve harmonic parametrization of this Lion mesh <br>
-</p><center><img src="http://www.columbia.edu/~kq2129/images/lion.png" height="300" width="300"><img src="http://www.columbia.edu/~kq2129/images/lionPlane.png" height="300" width="300"></center><p></p>
+<p>Remarkably, using the smoothing machinery and tweaking a bit, we can create 2D
+parametrizations for our 3D surfaces. If we have a mesh with a boundary, one
+simple technique we can use is to map the boundary to the unit circle and then
+place the remaining vertices within the disk in such a way that we minimize
+displacement. Using the Dirichlet Energy as a measure, we can achieve harmonic
+parametrization of this Lion mesh</p>
+<center><img src="images/lion.png" alt="" /><img src="images/lionPlane.png" alt="" /></center>
 
-<p></p><p>Because we restrict the boundary, this method can cause the parametrization to warp angles and areas. Using a Least Squares Conformal Mapping, we can free the boundary, show below on the left. Even beyond freeing the boundary, we can come up with an As Rigid As Possible parametrization and use LSCM as a starting point to improve upon, shown below on the right. <br></p>
+<p>Because we restrict the boundary, this method can cause the parametrization to
+warp angles and areas. Using a Least Squares Conformal Mapping, we can free the
+boundary, show below on the left. Even beyond freeing the boundary, we can come
+up with an As Rigid As Possible parametrization and use LSCM as a starting
+point to improve upon, shown below on the right.</p>
+<center><img src="images/harmonicLion.png" alt="" /><img src="images/arapLion.png" alt="" /></center>
 
-<p></p><center><img src="http://www.columbia.edu/~kq2129/images/harmonicLion.png" height="300" width="250"><img src="http://www.columbia.edu/~kq2129/images/arapLion.png" height="300" width="250"></center>
+<p>This parametrization can be used to overlay textures onto the original surface,
+as it is already a planar representation of our three dimensional object.
+Because of our choice of energies and physically based techniques, we can be
+sure to get as little distortion in the mapping as we aimed for angle and area
+preservation.</p>
+<center><img src="images/checkerboardLion.png" alt="" /></center>
 
-<p></p><p> This parametrization can be used to overlay textures onto the original surface, as it is already a planar representation of our three dimensional object. Because of our choice of energies and physically based techniques, we can be sure to get as little distortion in the mapping as we aimed for angle and area preservation.  <br>
-</p><center> <br>
-<img src="http://www.columbia.edu/~kq2129/images/checkerboardLion.png" height="300" width="250"> </center><p></p>
+<h3 id="5.remeshing">5. Remeshing</h3>
 
-<h3 id="5-remeshing">5. Remeshing</h3>
+<p>Even though it may seem like triangle meshes are in fact all we ever work with,
+there is no reason to restrict ourselves. In fact, there are sometimes benefits
+to working with quadrilateral meshes instead. Due to this, there is quite a bit
+of literature on developing good remeshing algorithms. Here is an example of
+the transformation from a triangle mesh to a quad mesh</p>
+<center><img src="images/3holes.png" alt="" /><img src="images/remeshedHoles.png" alt="" /></center>
 
-<p>Even though it may seem like triangle meshes are in fact all we ever work with, thereâ€™s no reason to restrict ourselves. In fact, there are sometimes benefits to working with quadrilateral meshes instead. Due to this, there is quite a bit of literature on developing good remeshing algorithms. Here is an example of the transformation from a triangle mesh to a quad mesh</p>
+<h3 id="6.visualizingmeshfeatures">6. Visualizing Mesh Features</h3>
 
-<p></p><center><img src="http://www.columbia.edu/~kq2129/images/3holes.png" height="300" width="450"> <br>
-<center> <br>
-<img src="http://www.columbia.edu/~kq2129/images/remeshedHoles.png" height="300" width="450"></center>
+<p>The automatic detection of mesh features like symmetry, curvature, and
+spin-axes are also useful tools for mesh analysis. Here is a plot of elliptic,
+hyperbolic, and parabolic curvature on a bumpy square mesh</p>
+<center> <img src="images/curvature.png" alt="" /> </center>
 
-</center>
+<h3 id="7.deformations">7. Deformations</h3>
 
-<h3 id="6-visualizing-mesh-features">6. Visualizing Mesh Features</h3>
+<p>Mesh deformation techniques allow users to create new meshes by deforming
+existing ones. This has especially important implications for character
+animations. Handle-based deformations allow users to specify the positions of a
+few predetermined handle points and allows the algorithm to deduce the rest.
+Creating physically plausible deformations of characters is a challenging task,
+and often sophisticated mathematical concepts are hidden behind simple uses
+interfaces. Here&#8217;s a deformation of a knight character using an As Rigid As
+Possible scheme</p>
+<center><img src="images/knight.png" alt="" /><img src="images/deformedKnight.png" alt="" /></center>
 
-<p>The automatic detection of mesh features like symmetry, curvature, and spin-axes are also useful tools for mesh analysis. Here is a plot of elliptic, hyperbolic, and parabolic curvature on a bumpy square mesh</p>
+<h3 id="amathematicalfoundation">A Mathematical Foundation</h3>
 
-<p></p><center> <br>
-<img src="http://www.columbia.edu/~kq2129/images/curvature.png" height="300" width="350"> <br>
-</center><p></p>
-
-
-
-<h3 id="7-deformations">7. Deformations</h3>
-
-<p>Mesh deformation techniques allow users to create new meshes by deforming existing ones. This has especially important implications for character animations. Handle-based deformations allow users to specify the positions of a few predetermined handle points and allows the algorithm to deduce the rest. Creating physically plausible deformations of characters is a challenging task, and often sophisticated mathematical concepts are hidden behind simple uses interfaces. Hereâ€™s a deformation of a knight character using an As Rigid As Possible scheme</p>
-
-<p></p><center><img src="http://www.columbia.edu/~kq2129/images/knight.png" height="400" width="250"><img src="http://www.columbia.edu/~kq2129/images/deformedKnight.png" height="400" width="250"></center><p></p>
-
-<h3 id="a-mathematical-foundation">A Mathematical Foundation</h3>
-
-<p>Much of the framing for our techniques will be looking at the continuous analogue of our problem and discretizing it in an intrinsic way, preserving continuous theorems as much as possible. We will discretize continuous operators like the Laplacian and the Gradient, and we will find adequate representations of concepts like normal vectors and curvature. Perhaps surprisingly we will see that there are many choices of discretization, each with their own benefits and downsides, prompting us to choose appropriately for the particular application. </p>
-
-
+<p>Much of the framing for our techniques will be looking at the continuous
+analogue of our problem and discretizing it in an intrinsic way, preserving
+continuous theorems as much as possible. We will discretize continuous
+operators like the Laplacian and the Gradient, and we will find adequate
+representations of concepts like normal vectors and curvature. Perhaps
+surprisingly we will see that there are many choices of discretization, each
+with their own benefits and downsides, prompting us to choose appropriately for
+the particular application.</p>
 
 <h3 id="prerequisites">Prerequisites</h3>
 
-<p>Students should be comfortable with Linear Algebra and Multivariable Calculus, and while knowledge of Partial Differential Equations is not required, it will certainly be very handy for derivations. A quick survey will be posted to help students evaluate their readiness on these topics.</p>
+<p>Students should be comfortable with Linear Algebra and Multivariable Calculus,
+and while knowledge of Partial Differential Equations is not required, it will
+certainly be very handy for derivations. A quick survey will be posted to help
+students evaluate their readiness on these topics.</p>
 
-<p>On the programming side, we will be coding mainly in <code>C++</code> and using a miniature version of <code>Libigl</code>, an open-source geometry processing library. We will be using <code>Eigen</code> for computational linear algebra, and <code>Cmake</code> for linking and developing executables. </p>
+<p>On the programming side, we will be coding mainly in <code>C++</code> and using a
+miniature version of <code>Libigl</code>, an open-source geometry processing library. We
+will be using <code>Eigen</code> for computational linear algebra, and <code>Cmake</code> for linking
+and developing executables.</p>
 
-<h3 id="texts">Texts</h3>
+<h3 id="supplementaltextbook">Supplemental Textbook</h3>
 
-<p>A very useful book is</p>
+<p><a href="https://www.amazon.ca/Polygon-Mesh-Processing-Mario-Botsch/dp/1568814267/"><em>Polygon Mesh
+Processing</em></a>.
+Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.</p>
 
-<p><strong>Polygon Mesh Processing</strong> <br>
-<em>Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy</em> <br>
-A K Peters/CRC Press 2010 <br>
-Print ISBN: 978-1-56881-426-1 <br>
-eBook ISBN: 978-1-4398-6531-6</p>
+</body>
+</html>
