@@ -8,26 +8,35 @@ Winter Term 2017
 CSC2521 [Topics in Computer Graphics: Geometry Processing]  
 Prof. Alec Jacobson  
 
-_This course page is a work in progress. Stay tuned._
+Extending traditional signal processing, _geometry processing_ interprets
+three-dimensional curves and surfaces as signals. Just as audio and image
+signal data can be filtered, denoised and decomposed spectrally, so can the
+geometry of a three-dimensional curve or surface.
 
-This geometry processing course focuses on developing and implementing
-mathematically derived algorithms to manipulate virtual geometrical models.
-Engineers, computer scientists, artists, physicists,  architects,
-neuroscientists, and curious students alike need these algorithms to be robust,
-efficient, and visually pleasing. Even with such a variety of users processing
-mesh geometry, there is a common user pipeline that emerges, and this course
-will focus particularly on developing a cohesive understanding of each stage of
-the pipeline.
+In this course, we study the algorithms and mathematics behind fundamental
+operations for interpreting and manipulating geometric data. These essential
+tools enable: geometric modeling for computer aided design, life-like
+animations for computer graphics, and robust scene representations for computer
+vision.
+
+Topics include: discrete curves and surfaces, curvature computation, surface
+reconstruction from point clouds, surface smoothing and denoising, mesh
+simplification, parameterization, symmetry detection, shape deformation and
+animation.
+
 
 ## Organization
 
-Students will attend lectures where exposition and mathematical derivations are
-given, and are expected to complete weekly programming assignments implementing
-derived algorithms. By the end of the semester, they should be able to have a
-finalized creative piece of geometry that they can 3D print or use virtually,
-utilizing their newly developed toolset. There also may be a short in-class
-exam that should be relatively easy for students who attended lecture and
-worked through the derivations.
+In lecture we will cover the mathematical background and visual intuition of
+the week's topic. At home, students will complete a **_weekly_** programming
+assignment to implement a corresponding algorithm. By the end of the semester,
+these algorithms compose a toolbox that students can use to create a unique
+_artifact_: the **_final project_** is to use these tools to create a unique
+piece of geometry to visualize (as an image or interactive experience) or 3D
+print. There may be short in-class quizzes (easy for students who
+attended lecture and worked through the derivations).
+
+_Below is a work in progress. Stay tuned._
 
 ## Objectives
 
