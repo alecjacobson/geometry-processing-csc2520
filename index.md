@@ -7,6 +7,13 @@ html header:  <link rel="stylesheet" href=style.css>
 Winter Term 2017  
 CSC2521 [Topics in Computer Graphics: Geometry Processing]  
 Prof. Alec Jacobson  
+W 3-5 BA 5187 (via BA 5166)  
+
+The class is aimed at preparing students for working with geometric data via
+understanding fundamental theoretical concepts. Students should have a
+background in _Linear Algebra_ and _Computer Programming_. Previous
+experience with _Numerical Methods_, _Differential Equations_, and _Differential
+Geometry_ is appreciated but not required.
 
 Extending traditional signal processing, _geometry processing_ interprets
 three-dimensional curves and surfaces as signals. Just as audio and image
@@ -16,8 +23,8 @@ geometry of a three-dimensional curve or surface.
 In this course, we study the algorithms and mathematics behind fundamental
 operations for interpreting and manipulating geometric data. These essential
 tools enable: geometric modeling for computer aided design, life-like
-animations for computer graphics, and robust scene representations for computer
-vision.
+animations for computer graphics, reliable physical simulations,  and robust
+scene representations for computer vision.
 
 Topics include: discrete curves and surfaces, curvature computation, surface
 reconstruction from point clouds, surface smoothing and denoising, mesh
@@ -28,13 +35,12 @@ animation.
 ## Organization
 
 In lecture we will cover the mathematical background and visual intuition of
-the week's topic. At home, students will complete a **_weekly_** programming
-assignment to implement a corresponding algorithm. By the end of the semester,
-these algorithms compose a toolbox that students can use to create a unique
-_artifact_: the **_final project_** is to use these tools to create a unique
-piece of geometry to visualize (as an image or interactive experience) or 3D
-print. There may be short in-class quizzes (easy for students who
-attended lecture and worked through the derivations).
+the week's topic. At home, students will complete a small **_weekly_**
+programming assignment to implement a corresponding algorithm. By the end of
+the semester, these algorithms compose a toolbox that students can use to
+create a unique _artifact_: the **_final project_** is to use these tools to
+create a unique piece of geometry to visualize (as an image or interactive
+experience) or 3D print. 
 
 _Below is a work in progress. Stay tuned._
 
