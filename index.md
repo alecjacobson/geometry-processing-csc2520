@@ -201,6 +201,24 @@ surprisingly we will see that there are many choices of discretization, each
 with their own benefits and downsides, prompting us to choose appropriately for
 the particular application.
 
+## Schedule
+
+| Lecture Date          | Tentative Topic |
+|:----------------------|:--|
+| Wednesday, 11/01/2017 | **Geometry Processing Pipeline**, shapes, surface representations, data structures, linear algebra, libigl. <br> _Polygon Mesh Processing_ [Botsch et al. 2008] <br> _**HW 00 assigned**_
+| Wednesday, 18/01/2017 | **Acquisition & reconstruction**, characteristic function, surface normals, scattered data interpolation, spatial gradient, spatial Laplacian, linear least squares, <br> "Poisson surface reconstruction" [Kazhdan et al. 2006] <br> _**HW 01 assigned**_
+| Wednesday, 25/01/2017 | **Alignment & registration** Hausdorff distance, point-to-plane distance, iterative closest point, orthogonal Procrustes problem, sampling points on surfaces <br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> _**HW 02 assigned**_ |
+| Wednesday, 01/02/2017 | **Surface fairing & denoising**, Laplace-Beltrami, mean curvature, geometric flow, partial differential equations, cotangent Laplacian <br> "Curve and surface smoothing without shrinkage" [Taubin 1995] <br> "Skeleton extraction by mesh contraction" [Au et al. 2008]<br> "Can Mean-Curvature Flow Be Made Non-Singular" [Kazhdan et al. 2005]<br>_**HW 03 assigned**_|
+| Wednesday, 08/02/2017 | **Surface parameterization** |
+| Wednesday, 15/02/2017 | **Shape deformation** |
+| Wednesday, 22/02/2017 | **Curvature & surface analysis** |
+| Wednesday, 01/03/2017 | **Mesh decimation, simplification, remeshing** |
+| Wednesday, 08/03/2017 | **Quad meshing** |
+| Wednesday, 15/03/2017 | **Subdivision surfaces**|
+| Wednesday, 22/03/2017 | **Signed distances, constructive solid geometry, voxelization** |
+| Wednesday, 29/03/2017 | **3D printing** |
+| <span style=color:#666;>Wednesday, 05/04/2017</span> | |
+
 ## Supplemental Textbook
 
 [_Polygon Mesh
