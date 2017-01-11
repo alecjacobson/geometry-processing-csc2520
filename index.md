@@ -124,6 +124,8 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
   assignments
 - 5% full-class collaborative project: improve
   [https://en.wikipedia.org/wiki/Geometry_processing](https://en.wikipedia.org/wiki/Geometry_processing)
+  and [related
+  topics](https://en.wikipedia.org/wiki/Category:Geometry_processing)
     - Graded based on delta of this page between now and end of term
     - Grade is shared by entire class
 
