@@ -30,7 +30,10 @@ body
 {
   font-size: 10pt;
   background-color: #fff;
-  margin:0px auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center; /* for aligning display-inline figures */
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   counter-reset: figures; 
@@ -70,7 +73,6 @@ figure
 {
   display: inline-block;
   vertical-align: top;
-  width: 45%; 
   margin: 0 auto;
   border: 5px solid #FFF;
 }

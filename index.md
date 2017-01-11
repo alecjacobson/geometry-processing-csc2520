@@ -4,6 +4,8 @@ html header:  <link rel="stylesheet" href=style.css>
 
 # Geometry Processing
 
+![](images/libigl-teaser.jpg)
+
 Winter Term 2017  
 CSC2521 [Topics in Computer Graphics: Geometry Processing]  
 Prof. Alec Jacobson  
