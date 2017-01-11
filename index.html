@@ -40,14 +40,12 @@ animation.</p>
 <h2 id="organization">Organization</h2>
 
 <p>In lecture we will cover the mathematical background and visual intuition of
-the week&#8217;s topic. At home, students will complete a small <strong><em>weekly</em></strong>
-programming assignment to implement a corresponding algorithm. By the end of
-the semester, these algorithms compose a toolbox that students can use to
-create a unique <em>artifact</em>: the <strong><em>final project</em></strong> is to use these tools to
-create a unique piece of geometry to visualize (as an image or interactive
-experience) or 3D print. </p>
-
-<p><em>Below is a work in progress. Stay tuned.</em></p>
+the week&#8217;s topic. At home, students will <strong><em>read academic papers</em></strong> and complete a
+small <strong><em>weekly</em></strong> programming assignment to implement a corresponding
+algorithm. By the end of the semester, these algorithms compose a toolbox that
+students can use to create a unique <em>artifact</em>: the <strong><em>final project</em></strong> is to
+use these tools to create a unique piece of geometry to visualize (as an image
+or interactive experience) or 3D print. </p>
 
 <h2 id="objectives">Objectives</h2>
 
@@ -77,154 +75,10 @@ certainly be very handy for derivations. A quick survey will be posted to help
 students evaluate their readiness on these topics.</p>
 
 <p>On the programming side, we will be coding mainly in <strong>C++</strong> and using a
-miniature version of <a href="http://libigl.github.io/libigl/">libigl</a>, an open-source
-geometry processing library. We will be using
-<a href="http://eigen.tuxfamily.org">Eigen</a> for computational linear algebra, and
-<a href="http://cmake.org">Cmake</a> for building the coding assignments.</p>
-
-<h2 id="topics">Topics</h2>
-
-<h3 id="1.acquisitionandreconstruction">1. Acquisition and Reconstruction</h3>
-
-<p>Recent developments in scanning technology have dramatically increased our
-capability to faithfully represent real-world objects virtually. Take the
-Stanford Bunny, which can be scanned into a cloud of 3D coordinates by a laser scanner. </p>
-
-<figure>
-<img src="images/stanfordBunny.jpeg" alt="Consider a physical sculpture of a bunny made out of ceramic." />
-<figcaption>Consider a physical sculpture of a bunny made out of ceramic.</figcaption>
-</figure>
-
-<figure>
-<img src="images/stanfordBunnyCloud.jpg" alt="A laser scan of the bunny recreates the shape virtually as a cloud of points." />
-<figcaption>A laser scan of the bunny recreates the shape virtually as a cloud of points.</figcaption>
-</figure>
-
-<p>We can convert the loose set of points into a closed surface composed of many
-small triangles, a triangle mesh. Triangle meshes are the most popular discrete representation for continuous
-surfaces on the computer. We can save the mesh to a file and load it into other
-programs, for example <a href="http://libigl.github.io/libigl/">libigl</a>&#8217;s viewer:</p>
-
-<figure>
-<img src="images/reconstructedBunny.jpg" alt="The loose set of points is converted to a closed surface mesh." />
-<figcaption>The loose set of points is converted to a closed surface mesh.</figcaption>
-</figure>
-
-<figure>
-<img src="images/stanfordBunnyMesh.jpg" alt=" libigl's viewer renders the same bunny." />
-<figcaption> <a href="http://libigl.github.io/libigl/">libigl</a>&#8217;s viewer renders the same bunny.</figcaption>
-</figure>
-
-<h3 id="2.surfacefairinganddenoising">2. Surface Fairing and Denoising</h3>
-
-<p>If the scan was not so good, it is possible that the reconstructed mesh surface
-is noisy. To illustrate this point, I have artificially introduced random noise
-to the vertices of the bunny mesh. To fix this, I ran one step of implicit mean
-curvature flow to smooth the bunny.</p>
-
-<figure>
-<img src="images/noisyBunny.jpg" alt="The bunny is corrupted by noise." />
-<figcaption>The bunny is corrupted by noise.</figcaption>
-</figure>
-
-<figure>
-<img src="images/smoothBunny.jpg" alt="Flowing the surface smooths out the noise." />
-<figcaption>Flowing the surface smooths out the noise.</figcaption>
-</figure>
-
-<p>Continuing to smooth the bunny has an interesting effect. Eventually even low
-frequency details disappear. And finally the bunny simply becomes a sphere.</p>
-
-<figure>
-<img src="images/reallySmoothedBunny.jpg" alt="The bunny loses low frequency details." />
-<figcaption>The bunny loses low frequency details.</figcaption>
-</figure>
-
-<figure>
-<img src="images/tooMuchSmoothing.jpg" alt="The bunny has become a simple sphere." />
-<figcaption>The bunny has become a simple sphere.</figcaption>
-</figure>
-
-<h3 id="3.meshsimplification">3. Mesh Simplification</h3>
-
-<p>Some algorithms demand such computing power that it may be reasonable to reduce
-the complexity of our mesh by representing the geometry with fewer faces. Using
-a greedy algorithm to assign edge collapse weights, we can achieve remarkably
-nice results as shown on this fertility mesh</p>
-
-<figure>
-<img src="images/fertility.jpg" alt="The input Fertility model." />
-<figcaption>The input Fertility model.</figcaption>
-</figure>
-
-<figure>
-<img src="images/simplifiedFertility.jpg" alt="Mesh simplification maintains the geometry but removes triangles." />
-<figcaption>Mesh simplification maintains the geometry but removes triangles.</figcaption>
-</figure>
-
-<figure>
-<img src="images/reallySimplifiedFertility.jpg" alt="Further simplification can style maintain the shape but small artifacts
-appear." />
-<figcaption>Further simplification can style maintain the shape but small artifacts
-appear.</figcaption>
-</figure>
-
-<figure>
-<img src="images/simpleFertility.jpg" alt="Major simplification only captures the large features of the shape." />
-<figcaption>Major simplification only captures the large features of the shape.</figcaption>
-</figure>
-
-<h3 id="4.meshparametrization">4. Mesh Parametrization</h3>
-
-<p>Remarkably, using the smoothing machinery and tweaking a bit, we can create 2D
-parametrizations for our 3D surfaces. If we have a mesh with a boundary, one
-simple technique we can use is to map the boundary to the unit circle and then
-place the remaining vertices within the disk in such a way that we minimize
-displacement. Using the Dirichlet Energy as a measure, we can achieve harmonic
-parametrization of this Lion mesh</p>
-<center><img src="images/lion.jpg" alt="" /><img src="images/lionPlane.jpg" alt="" /></center>
-
-<p>Because we restrict the boundary, this method can cause the parametrization to
-warp angles and areas. Using a Least Squares Conformal Mapping, we can free the
-boundary, show below on the left. Even beyond freeing the boundary, we can come
-up with an As Rigid As Possible parametrization and use LSCM as a starting
-point to improve upon, shown below on the right.</p>
-<center><img src="images/harmonicLion.jpg" alt="" /><img src="images/arapLion.jpg" alt="" /></center>
-
-<p>This parametrization can be used to overlay textures onto the original surface,
-as it is already a planar representation of our three dimensional object.
-Because of our choice of energies and physically based techniques, we can be
-sure to get as little distortion in the mapping as we aimed for angle and area
-preservation.</p>
-<center><img src="images/checkerboardLion.jpg" alt="" /></center>
-
-<h3 id="5.remeshing">5. Remeshing</h3>
-
-<p>Even though it may seem like triangle meshes are in fact all we ever work with,
-there is no reason to restrict ourselves. In fact, there are sometimes benefits
-to working with quadrilateral meshes instead. Due to this, there is quite a bit
-of literature on developing good remeshing algorithms. Here is an example of
-the transformation from a triangle mesh to a quad mesh</p>
-<center><img src="images/3holes.jpg" alt="" /><img src="images/remeshedHoles.jpg" alt="" /></center>
-
-<h3 id="6.visualizingmeshfeatures">6. Visualizing Mesh Features</h3>
-
-<p>The automatic detection of mesh features like symmetry, curvature, and
-spin-axes are also useful tools for mesh analysis. Here is a plot of elliptic,
-hyperbolic, and parabolic curvature on a bumpy square mesh</p>
-<center> <img src="images/curvature.jpg" alt="" /> </center>
-
-<h3 id="7.deformations">7. Deformations</h3>
-
-<p>Mesh deformation techniques allow users to create new meshes by deforming
-existing ones. This has especially important implications for character
-animations. Handle-based deformations allow users to specify the positions of a
-few predetermined handle points and allows the algorithm to deduce the rest.
-Creating physically plausible deformations of characters is a challenging task,
-and often sophisticated mathematical concepts are hidden behind simple uses
-interfaces. Here&#8217;s a deformation of a knight character using an As Rigid As
-Possible scheme</p>
-<center><img src="images/knight.jpg" alt="" /><img src="images/deformedKnight.jpg" alt="" /></center>
+<a href="http://libigl.github.io/libigl/">libigl</a>, an open-source geometry processing
+library. We will be using <a href="http://eigen.tuxfamily.org">Eigen</a> for computational
+linear algebra, and <a href="http://cmake.org">Cmake</a> for building the coding
+assignments.</p>
 
 <h2 id="amathematicalfoundation">A Mathematical Foundation</h2>
 
@@ -255,7 +109,7 @@ the particular application.</p>
 <tbody>
 <tr>
 	<td style="text-align:left;">Wednesday, 11/01/2017</td>
-	<td style="text-align:left;"><strong>Geometry Processing Pipeline</strong>, shapes, surface representations, data structures, linear algebra, libigl. <br> <em>Polygon Mesh Processing</em> [Botsch et al. 2008] <br> <em><strong>HW 00 assigned</strong></em></td>
+	<td style="text-align:left;"><strong>Geometry Processing Pipeline</strong>, shapes, surface representations, data structures, linear algebra, libigl. <br> <em>Polygon Mesh Processing</em> [Botsch et al. 2008] <br> <em><strong><a href="https://github.com/alecjacobson/geometry-processing-introduction">HW 00 assigned</a>, due 17/01/2017</strong></em></td>
 </tr>
 <tr>
 	<td style="text-align:left;">Wednesday, 18/01/2017</td>
@@ -271,7 +125,7 @@ the particular application.</p>
 </tr>
 <tr>
 	<td style="text-align:left;">Wednesday, 08/02/2017</td>
-	<td style="text-align:left;"><strong>Surface parameterization</strong></td>
+	<td style="text-align:left;"><strong>Surface parameterization</strong>, (or guest lecture)</td>
 </tr>
 <tr>
 	<td style="text-align:left;">Wednesday, 15/02/2017</td>
@@ -313,6 +167,31 @@ the particular application.</p>
 <p><a href="https://www.amazon.ca/Polygon-Mesh-Processing-Mario-Botsch/dp/1568814267/"><em>Polygon Mesh
 Processing</em></a>.
 Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.</p>
+
+<h2 id="grading">Grading</h2>
+
+<ul>
+<li>50% small assignments</li>
+<li>25% final project:
+
+<ul>
+<li>in-class presentation</li>
+<li>formal two-page <a href="http://s2017.siggraph.org/talks-submissions">technical extended
+ abstract</a></li>
+<li>(less formal) in depth documentation</li>
+<li>it&#8217;s great if you can align with your research, but please discuss this
+ with me early on.</li>
+</ul></li>
+<li>20% participation: in class, reading papers, answering &#8220;Issues&#8221; on
+ assignments</li>
+<li>5% full-class collaborative project: improve
+ <a href="https://en.wikipedia.org/wiki/Geometry_processing">https://en.wikipedia.org/wiki/Geometry_processing</a>
+
+<ul>
+<li>Graded based on delta of this page between now and end of term</li>
+<li>Grade is shared by entire class</li>
+</ul></li>
+</ul>
 
 </body>
 </html>
