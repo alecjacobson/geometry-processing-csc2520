@@ -5,11 +5,11 @@ html header:  <link rel="stylesheet" href=../style.css>
 <script
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-# Geometry Processing – Introduction
+# [Geometry Processing](../) – Introduction
 
 ## Laser Scanning
 
-### Scanning Michaelangelo's David sculpture in Rome
+### Scanning Michaelangelo's David sculpture in Florence
 
 
 ![](images/scanning-david-levoy-photo-vs-rendering.jpg)
@@ -33,6 +33,7 @@ document.getElementById('scanning-david').addEventListener('loadedmetadata', fun
   }, false);
 </script>
 </video>
+
 [On YouTube](https://www.youtube.com/watch?v=NWfS4lSr7EU)
 
 ### Speed modeling 
