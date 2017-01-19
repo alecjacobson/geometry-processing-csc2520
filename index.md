@@ -106,7 +106,7 @@ the particular application.
 
 ## Lateness Policy
 
-0.7% off for every minute late.
+0.007% off for every minute late.
 
 ## Supplemental Textbook
 
