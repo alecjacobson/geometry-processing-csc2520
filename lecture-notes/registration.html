@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Geometry Processing – Alignment and Registration</title>
+	<meta name="author" content="Alec Jacobson"/>
+<link rel="stylesheet" href=../style.css>
+<link rel="stylesheet" href=style.css>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+
+<h1 id="geometryprocessing–alignmentandregistration"><a href="../index.html">Geometry Processing</a> – Alignment and Registration</h1>
+
+<h2 id="edgeseulercharacteristic">Edges &amp; Euler Characteristic</h2>
+
+<p><a href="https://github.com/alecjacobson/geometry-processing-introduction">HW00</a></p>
+
+<h2 id="wikipediaprogress">Wikipedia progress?</h2>
+
+<p><a href="https://en.wikipedia.org/w/index.php?title=Geometry_processing&amp;action=history">Geometry processing: Revision history</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Category:Geometry_processing">Geometry processing category</a></p>
+
+<h2 id="quadraticenergiesandlinearsystems">Quadratic energies and linear systems</h2>
+
+<p><a href="https://github.com/alecjacobson/geometry-processing-mesh-reconstruction">HW01</a></p>
+
+<p><a href="https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf">An Introduction to the Conjugate Gradient Method Without the Agonizing
+Pain</a>,
+Shewchuk 1994.</p>
+
+<h2 id="registeringmultiplescans">Registering Multiple Scans</h2>
+
+<figure>
+<img src="images/statue-registration.png" alt="" />
+</figure>
+
+<p><a href="http://www.cs.unc.edu/~yumeng/">source</a></p>
+
+<figure>
+<img src="images/bouaziz-kinect-acquisition-registration.jpg" alt="" />
+</figure>
+<div style="display:none">
+<span class="math">\[\newcommand{\mat}[1]{\mathbf{#1}}\]</span>
+<span class="math">\[\newcommand{\vec}[1]{\mathbf{#1}}\]</span>
+<span class="math">\[\newcommand{\A}{\mat{A}}\]</span>
+<span class="math">\[\newcommand{\B}{\mat{B}}\]</span>
+<span class="math">\[\newcommand{\C}{\mat{C}}\]</span>
+<span class="math">\[\newcommand{\D}{\mat{D}}\]</span>
+<span class="math">\[\newcommand{\I}{\mat{I}}\]</span>
+<span class="math">\[\newcommand{\G}{\mat{G}}\]</span>
+<span class="math">\[\newcommand{\N}{\mat{N}}\]</span>
+<span class="math">\[\newcommand{\P}{\mat{P}}\]</span>
+<span class="math">\[\newcommand{\Rot}{\mat{R}}\]</span>
+<span class="math">\[\newcommand{\R}{\mathbb{R}}\]</span>
+<span class="math">\[\newcommand{\One}{\mathbf{1}}\]</span>
+<span class="math">\[\newcommand{\S}{\mathcal{S}}\]</span>
+<span class="math">\[\newcommand{\M}{\mat{M}}\]</span>
+<span class="math">\[\newcommand{\U}{\mat{U}}\]</span>
+<span class="math">\[\newcommand{\V}{\mat{V}}\]</span>
+<span class="math">\[\newcommand{\W}{\mat{W}}\]</span>
+<span class="math">\[\newcommand{\X}{\mat{X}}\]</span>
+<span class="math">\[\newcommand{\Y}{\mat{Y}}\]</span>
+<span class="math">\[\newcommand{\c}{\vec{c}}\]</span>
+<span class="math">\[\newcommand{\f}{\vec{f}}\]</span>
+<span class="math">\[\newcommand{\g}{\vec{g}}\]</span>
+<span class="math">\[\newcommand{\n}{\vec{n}}\]</span>
+<span class="math">\[\newcommand{\p}{\vec{p}}\]</span>
+<span class="math">\[\newcommand{\tr}[1]{\mathop{\text{tr}}{\left(#1\right)}}\]</span>
+<span class="math">\[\newcommand{\t}{\vec{t}}\]</span>
+<span class="math">\[\newcommand{\x}{\vec{x}}\]</span>
+<span class="math">\[\newcommand{\y}{\vec{y}}\]</span>
+<span class="math">\[\newcommand{\u}{\vec{u}}\]</span>
+<span class="math">\[\newcommand{\z}{\vec{z}}\]</span>
+<span class="math">\[\renewcommand{\v}{\vec{v}}\]</span>
+<span class="math">\[\newcommand{\transpose}{{\mathsf T}}\]</span>
+<span class="math">\[\newcommand{\argmin}{\mathop{\text{argmin}}}\]</span>
+<span class="math">\[\newcommand{\argmax}{\mathop{\text{argmax}}}\]</span>
+</div>
+
+<h3 id="matchingsurfacesthatshareaparameterization">Matching surfaces that share a parameterization</h3>
+
+<p>For example, consider if a surface <span class="math">\(X\)</span> is given with a parameterization so that
+each point on <span class="math">\(X\)</span> can be written as a function of parameters <span class="math">\(u\)</span> and <span class="math">\(v\)</span>,
+<span class="math">\(\x(u,v) ∈ X\)</span>. If <span class="math">\(Y\)</span> is another surface produced by the same parameterization
+(<span class="math">\(\y(u,v) ∈ Y\)</span>), then we can think of <span class="math">\(Y\)</span> as a <em>deformation</em> of <span class="math">\(X\)</span> (or
+vice-versa). Each point <span class="math">\(\y(u,v)\)</span> on the surface <span class="math">\(Y\)</span> has a natural
+corresponding point <span class="math">\(\x(u,v)\)</span> on <span class="math">\(X\)</span> via the parameters <span class="math">\(u\)</span> and <span class="math">\(v\)</span>.</p>
+
+<figure>
+<img src="images/beetle-deformation.png" alt="The surface of a Beetle is deformed into a new surface. The
+parameterization of the original surface allows us to identify the
+corresponding points on the deformed surface.
+image source" />
+<figcaption>The surface of a Beetle is <em>deformed</em> into a new surface. The
+parameterization of the original surface allows us to identify the
+corresponding points on the deformed surface.
+<a href="http://www.cs.cmu.edu/~kmcrane/">image source</a></figcaption>
+</figure>
+
+<p>A very natural way to <em>measure</em> the difference between these two surfaces
+<em>aggregate</em> the distance between each pair of corresponding points. For
+example, we could <a href="https://en.wikipedia.org/wiki/Integral">integrate</a> this
+distance over the parametric domain
+(<a href="https://en.wikipedia.org/wiki/Without_loss_of_generality">w.l.o.g.</a> let&#8217;s say
+valid values are <span class="math">\(u,v ∈ (0,1)\)</span>):</p>
+
+<p><span class="math">\[
+D_2(X,Y) = \sqrt{ ∫_0^1∫_0^1 ‖\x(u,v) - \y(u,v)‖² \;du\;dv }
+\]</span></p>
+
+<p>This measure will be zero if the surfaces are the same for any choice of
+parameters <span class="math">\(u\)</span> and <span class="math">\(v\)</span>. The measure <span class="math">\(D_2(X,Y)\)</span> could large if every point on
+<span class="math">\(Y\)</span> is <em>slightly</em> deformed or if a few bad points are deformed a lot. This
+distance is the <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)#Infinite-dimensional_case">L²
+norm</a>
+of the magnitude of the <em>displacement</em> from <span class="math">\(X\)</span> to <span class="math">\(Y\)</span> (or vice-versa):</p>
+
+<p><span class="math">\[
+D_2(X,Y) = \sqrt{ ∫_0^1∫_0^1 d(u,v)² \;du\;dv }, \quad \text{ and } \quad d(u,v) = ‖\x(u,v) -
+\y(u,v)‖
+\]</span></p>
+
+<p>We can directly measure the <em>maximum</em> distance between corresponding
+points, the <span class="math">\(L^∞\)</span> norm:</p>
+
+<p><span class="math">\[
+D_∞(X,Y) = \lim_{p→∞} \sqrt[p]{∫_0^1∫_0^1 d(u,v)^p \;du\;dv } = \sup\limits_{u,v ∈
+(0,1)} ‖\x(u,v) - \y(u,v)‖,
+\]</span></p>
+
+<p>where <span class="math">\(\sup\)</span> takes the
+<a href="https://en.wikipedia.org/wiki/Infimum_and_supremum">supremum</a> (roughly the continuous math
+analog of the <a href="https://en.wikipedia.org/wiki/Maxima_and_minima">maximum</a>).</p>
+
+<p>The measure <span class="math">\(D_∞\)</span> will also be exactly zero if the surfaces are the same.</p>
+
+<h4 id="trianglemeshes">Triangle meshes</h4>
+
+<p>On the computer, we can store an explicit surface as a triangle mesh. Triangle
+meshes have an <em>implicit</em> parameterization: each triangle can be trivially
+and independently mapped to the unit triangle, via its <a href="https://en.wikipedia.org/wiki/Barycentric_coordinate_system#Barycentric_coordinates_on_triangles">barycentric
+coordinates</a>.</p>
+
+<p>Triangle meshes also afford an immediate analog of deformation: moving each
+vertex of the mesh (without change the mesh combinatorics/topology).</p>
+
+<p>So if <span class="math">\(\V_X ∈ \R^{n × 3}\)</span> represents the vertices of our surface <span class="math">\(X\)</span> with a set
+<span class="math">\(F\)</span> of <span class="math">\(m\)</span>
+triangular faces and <span class="math">\(\V_Y ∈ \R^{n × 3}\)</span> the vertices of deformed surface <span class="math">\(Y\)</span>,
+then we can rewrite our measure <span class="math">\(D_2\)</span> above as a sum of integrals over each
+triangle:</p>
+
+<p><span class="math">\[
+∑\limits_{\{i,j,k\} ∈ T}  \sqrt{ ∫_0^{1-u} ∫_0^1 
+\left\|
+\underbrace{\left(u \v_x^i + v \v_x^j + (1-u-v) \v_x^k\right)}_\x
+-
+\underbrace{\left(u \v_y^i + v \v_y^j + (1-u-v) \v_y^k\right)}_\y
+\right\|^2 \;du\;dv }
+\]</span></p>
+
+<blockquote>
+<p><strong>Note:</strong> The <em>areas</em> of the triangles in our mesh may be different. So this
+measure may be thrown off by a very large triangle with a small difference
+and may fail to measure a very small triangle with a large difference. We&#8217;ll
+learn how to account for this, later.</p>
+</blockquote>
+
+<p>Unfortunately, in many scenarios we do not have two co-parameterized surface or
+a simple per-vertex mesh deformation. Instead, we may have two arbitrary
+surfaces discretized with different meshes of different
+topologies. We will need a measure of difference or distance between two
+surfaces that does not assume a shared parameterization.</p>
+
+<h3 id="undirectedhausdorffdistance">(undirected) Hausdorff distance</h3>
+
+<p>To form a <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">metric</a> in the
+mathematical sense, a distance measure should be symmetric: distance from <span class="math">\(X\)</span>
+to <span class="math">\(Y\)</span> equals distance from <span class="math">\(Y\)</span> to <span class="math">\(X\)</span>. Hausdorff distance is defined as the
+maximum of directed Haurdorff distances:</p>
+
+<p><span class="math">\[
+D_{H}(X,Y) = \max \left[ D_{\overrightarrow{H}}(X,Y)\ , \ D_{\overrightarrow{H}}(Y,X) \right].
+\]</span></p>
+
+<p>Unlike each individual directed distance, the (undirected) Hausdorff distance
+will measure zero <a href="https://en.wikipedia.org/wiki/If_and_only_if">if and only
+if</a> the <a href="https://en.wikipedia.org/wiki/Euclidean_space#Balls.2C_spheres.2C_and_hypersurfaces">point
+set</a>
+of the surface <span class="math">\(X\)</span> is identical to that of <span class="math">\(Y\)</span>.</p>
+
+<figure>
+<img src="images/hausdorff-distance-2d.png" alt="" />
+</figure>
+
+<h4 id="hausdorffdistancebetweentrianglemeshes">Hausdorff distance between triangle meshes</h4>
+
+<p>On the computer, surfaces represented with triangle meshes (like any point set)
+admit a well-defined Hausdorff distance between one-another. Unfortunately,
+computing <em>exact</em> Hausdorff distance between two triangle meshes remains a
+difficult task: existing exact algorithms are prohibitively inefficient.</p>
+
+<p>We do not know <a href="https://en.wikipedia.org/wiki/A_priori_and_a_posteriori"><em>a
+priori</em></a> which
+point(s) of each triangle mesh will end up determining the maximum value. It is
+tempting, optimistic, but ultimately incorrect to assume that the <em>generator</em>
+points will be one of the vertices of the triangle mesh. Consider if a triangle
+<span class="math">\(t\)</span> connected corners at <span class="math">\((1,1,0)\)</span>, <span class="math">\((1,0,1)\)</span> and <span class="math">\((0,1,1)\)</span> and <span class="math">\(B\)</span> was a mesh
+with two triangles, the first connecting <span class="math">\((0,0,0)\)</span>, <span class="math">\((1,0,1)\)</span> and <span class="math">\((1,1,0)\)</span> and
+the second connecting <span class="math">\((0,0,0)\)</span>, <span class="math">\((0,1,1)\)</span> and <span class="math">\((1,1,0)\)</span>. The corners of <span class="math">\(t\)</span>
+also appear as vertices of <span class="math">\(B\)</span>, so clearly their respective vertex-to-mesh
+distances are zero, yet the maximum minimum distance from <span class="math">\(t\)</span> to <span class="math">\(B\)</span> is clearly
+non-zero (it is <span class="math">\(\sqrt{3}/3\)</span>).</p>
+
+<figure>
+<img src="images/hausdorff-counterexample-3d.jpg" alt="The directed Hausdorff distance from the orange triangle $A$ to
+the blue, two-triangle mesh $B$ is non-zero (generated by red segment), but the
+distance from each corner of $A$ to $B$ is
+zero." />
+<figcaption>The directed Hausdorff distance from the orange triangle <span class="math">\(A\)</span> to
+the blue, two-triangle mesh <span class="math">\(B\)</span> is non-zero (generated by red segment), but the
+distance from each corner of <span class="math">\(A\)</span> to <span class="math">\(B\)</span> is
+zero.</figcaption>
+</figure>
+
+<p>One might also optimistically, but erroneously hope that by considering the
+symmetric Hausdorff distance one of the <em>generator</em> points must lie on a vertex
+of <span class="math">\(A\)</span> or of <span class="math">\(B\)</span>. Unfortunately, this only follows for convex shapes.</p>
+
+<figure>
+<img src="images/hausdorff-non-convex-2d.png" alt="The directed Hausdorff distance to the blue alligator shape
+in 2D from its orange convex hull is generated by non-vertex points. Since
+the symmetric Hausdorff distance is the maximum of this and the smaller
+distance from the blue shape to the orange shape, it is also generated by these
+non-vertex points." />
+<figcaption>The directed Hausdorff distance <em>to</em> the blue &#8220;alligator&#8221; shape
+in 2D <em>from</em> its orange convex hull is generated by non-vertex points. Since
+the symmetric Hausdorff distance is the maximum of this and the smaller
+distance from the blue shape to the orange shape, it is also generated by these
+non-vertex points.</figcaption>
+</figure>
+
+<h2 id="integratedclosest-pointdistance">Integrated closest-point distance</h2>
+
+<h2 id="symmetricmatchingdistance">Symmetric matching distance</h2>
+
+<p>We can similarly define a symmetric distance by <em>summing</em> the two directed
+distances:</p>
+
+<p><span class="math">\[
+D_{C}(X,Y) = 
+D_{\overrightarrow{C}}(X,Y) +
+D_{\overrightarrow{C}}(Y,X) = 
+\sqrt{\ ∫\limits_{\x∈X} ‖\x - P_Y(\x) ‖² \;dA }+
+\sqrt{\ ∫\limits_{\y∈Y} ‖\y - P_X(\y) ‖² \;dA }.
+\]</span></p>
+
+<h2 id="unconstrainedicp">Unconstrained ICP</h2>
+
+<p>If we place no restrictions or
+<a href="https://en.wikipedia.org/wiki/Constrained_optimization">constraints</a> on the
+transformation <span class="math">\(T: \R³ → \R³\)</span>, then there are many <a href="https://en.wikipedia.org/wiki/Triviality_(mathematics)">trivial
+solutions</a> to
+minimizing <span class="math">\(E_{\overrightarrow{C}}(T(X),Y)\)</span>. For example, we could simply
+define <span class="math">\(T\)</span> so that every point <span class="math">\(\x\)</span> gets mapped to its closest point on <span class="math">\(Y\)</span>:
+<span class="math">\(T(\x) := P_Y(\x)\)</span>. This would clearly induce <span class="math">\(E_{\overrightarrow{C}}=0\)</span>.
+Actually, we could get zero energy even if we define <span class="math">\(T\)</span> to map <em>all</em> points on
+<span class="math">\(X\)</span> to the same <em>arbitrary</em> point on <span class="math">\(Y\)</span>: <span class="math">\(T(\x) := \y\)</span>.</p>
+
+<blockquote>
+<h3 id="symmetricenergyforcompletematches">Symmetric energy for complete matches</h3>
+
+<p>If <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> are <em>complete</em> matches, then one way to remove these trivial
+solutions is to minimize the symmetric energy summing energies from <span class="math">\(X\)</span> to <span class="math">\(Y\)</span>
+and from <span class="math">\(Y\)</span> to <span class="math">\(X\)</span>:</p>
+
+<p><span class="math">\[
+E_C(T(X),Y) = E_{\overrightarrow{C}}(T(X),Y) + E_{\overrightarrow{C}}(Y,T(X)).
+\]</span></p>
+
+<p>Appending the energy <span class="math">\(E_{\overrightarrow{C}}(Y,T(X))\)</span> measure the distance
+from all points on <span class="math">\(Y\)</span> to the transformed surface <span class="math">\(T(X)\)</span> ensures that we will
+not get zero energy if some part of <span class="math">\(Y\)</span> does not get matched to some part of
+<span class="math">\(X\)</span>.</p>
+</blockquote>
+<script>
+var images = $("figure img");
+$.each(images, function() {
+    $(this).replaceWith($("<a href='"+this.src+"'>"+this.outerHTML+"</a>"));
+    });
+</script>
+
+</body>
+</html>
