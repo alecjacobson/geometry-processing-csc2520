@@ -31,8 +31,6 @@ Shewchuk 1994.
 
 [source](http://www.cs.unc.edu/~yumeng/)
 
-![](images/bouaziz-kinect-acquisition-registration.jpg)
-
 <div style="display:none">
 $$\newcommand{\mat}[1]{\mathbf{#1}}$$
 $$\newcommand{\vec}[1]{\mathbf{#1}}$$
@@ -255,6 +253,26 @@ $X$ to the same _arbitrary_ point on $Y$: $T(\x) := \y$.
 > not get zero energy if some part of $Y$ does not get matched to some part of
 > $X$.
 
+------------------------------------------------------------------------------
+
+## Sofien Bouaziz's PhD Thesis
+
+![](images/bouaziz-kinect-acquisition-registration.jpg)
+
+Sections 3.2-3.3 provide a modern optimization-view of iterative closest point
+method. Places ICP as an instance of a _very_ powerful "space of optimization
+techniques". New way of looking at just about any optimization problem.
+
+[Source](http://sofienbouaziz.com/publications.php)
+
+
+## Point-to-plane vs. point-to-plane
+
+![ICP using the point-to-point matching energy linearization is slow to
+converge.](images/max-point-to-point.gif)
+
+![ICP using the point-to-plane matching energy linearization is
+faster.](images/max-point-to-plane.gif)
 
 <script>
 var images = $("figure img");

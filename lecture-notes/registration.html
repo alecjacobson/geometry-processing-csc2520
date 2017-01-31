@@ -38,10 +38,6 @@ Shewchuk 1994.</p>
 </figure>
 
 <p><a href="http://www.cs.unc.edu/~yumeng/">source</a></p>
-
-<figure>
-<img src="images/bouaziz-kinect-acquisition-registration.jpg" alt="" />
-</figure>
 <div style="display:none">
 <span class="math">\[\newcommand{\mat}[1]{\mathbf{#1}}\]</span>
 <span class="math">\[\newcommand{\vec}[1]{\mathbf{#1}}\]</span>
@@ -286,6 +282,36 @@ from all points on <span class="math">\(Y\)</span> to the transformed surface <s
 not get zero energy if some part of <span class="math">\(Y\)</span> does not get matched to some part of
 <span class="math">\(X\)</span>.</p>
 </blockquote>
+
+<hr />
+
+<h2 id="sofienbouazizsphdthesis">Sofien Bouaziz&#8217;s PhD Thesis</h2>
+
+<figure>
+<img src="images/bouaziz-kinect-acquisition-registration.jpg" alt="" />
+</figure>
+
+<p>Sections 3.2&#8211;3.3 provide a modern optimization-view of iterative closest point
+method. Places ICP as an instance of a <em>very</em> powerful &#8220;space of optimization
+techniques&#8221;. New way of looking at just about any optimization problem.</p>
+
+<p><a href="http://sofienbouaziz.com/publications.php">Source</a></p>
+
+<h2 id="point-to-planevs.point-to-plane">Point-to-plane vs. point-to-plane</h2>
+
+<figure>
+<img src="images/max-point-to-point.gif" alt="ICP using the point-to-point matching energy linearization is slow to
+converge." />
+<figcaption>ICP using the point-to-point matching energy linearization is slow to
+converge.</figcaption>
+</figure>
+
+<figure>
+<img src="images/max-point-to-plane.gif" alt="ICP using the point-to-plane matching energy linearization is
+faster." />
+<figcaption>ICP using the point-to-plane matching energy linearization is
+faster.</figcaption>
+</figure>
 <script>
 var images = $("figure img");
 $.each(images, function() {
