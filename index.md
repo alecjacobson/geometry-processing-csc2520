@@ -93,16 +93,16 @@ the particular application.
 | Wednesday, 11/01/2017 | [**Geometry Processing Pipeline**](lecture-notes/introduction.html), shapes, surface representations, tangents and normals, <del>data structures, linear algebra</del>, topology, libigl. <br> _Polygon Mesh Processing_ [Botsch et al. 2008] <br> _**[HW 00 assigned](https://github.com/alecjacobson/geometry-processing-introduction), due 17/01/2017**_
 | Wednesday, 18/01/2017 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.html), discrete topology, meshes, characteristic function, scattered data interpolation, spatial gradient, <del>spatial Laplacian</del>, linear least squares, <br> "Poisson surface reconstruction" [Kazhdan et al. 2006] <br> _**[HW 01 assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction) due 29/01/2017**_
 | Wednesday, 25/01/2017 | [**Alignment & registration**](lecture-notes/registration.html) Hausdorff distance, point-to-plane distance, iterative closest point, orthogonal Procrustes problem, sampling points on surfaces <br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Efficient Variants of the ICP Algorithm" [Rusinkiewicz & Levoy 2001] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> _**[HW 02 assigned](https://github.com/alecjacobson/geometry-processing-registration) due 5/2/2017**_ |
-| Wednesday, 01/02/2017 | **Surface fairing & denoising**, Laplace-Beltrami, mean curvature, geometric flow, partial differential equations, cotangent Laplacian <br> "Curve and surface smoothing without shrinkage" [Taubin 1995] <br> "Skeleton extraction by mesh contraction" [Au et al. 2008]<br> "Can Mean-Curvature Flow Be Made Non-Singular" [Kazhdan et al. 2005]<br>_**HW 03 assigned**_|
-| Wednesday, 08/02/2017 | **Surface parameterization**, (or guest lecture) |
+| Wednesday, 01/02/2017 | [_Alignment & registration continued_](lecture-notes/registration.html), **Surface fairing & denoising**, Laplace-Beltrami, mean curvature, geometric flow, partial differential equations, cotangent Laplacian <br> "Curve and surface smoothing without shrinkage" [Taubin 1995] <br> "Skeleton extraction by mesh contraction" [Au et al. 2008]<br> "Can Mean-Curvature Flow Be Made Non-Singular" [Kazhdan et al. 2005]<br>_**HW 03 assigned**_|
+| Wednesday, 08/02/2017 | **Surface parameterization**, Guest lecture by [Ryan Schmidt](http://www.rms80.com) |
 | Wednesday, 15/02/2017 | **Shape deformation** |
 | Wednesday, 22/02/2017 | **Curvature & surface analysis** |
 | Wednesday, 01/03/2017 | **Mesh decimation, simplification, remeshing** |
 | Wednesday, 08/03/2017 | **Quad meshing** |
-| Wednesday, 15/03/2017 | **Subdivision surfaces**|
-| Wednesday, 22/03/2017 | **Signed distances, constructive solid geometry, voxelization** |
-| Wednesday, 29/03/2017 | **3D printing** |
-| <span style=color:#666;>Wednesday, 05/04/2017</span> | |
+| Wednesday, 15/03/2017 | **Subdivision surfaces** |
+| Wednesday, 22/03/2017 | **3D printing**, guest lecture by [Nobuyuki Umetani](http://nobuyuki-umetani.com) |
+| Wednesday, 29/03/2017 | **Signed distances, constructive solid geometry, voxelization** |
+| Wednesday, 05/04/2017 | **Final project presentations** |
 
 ## Lateness Policy
 
