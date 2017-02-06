@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Geometry Processing – Alignment and Registration</title>
+	<meta name="author" content="Alec Jacobson"/>
+<link rel="stylesheet" href=../style.css>
+<link rel="stylesheet" href=style.css>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+
+<h1 id="geometryprocessing–smoothing"><a href="../index.html">Geometry Processing</a> – Smoothing</h1>
+
+<h2 id="guestlecturenextweek">Guest lecture next week</h2>
+
+<p><a href="http://www.rms80.com">Ryan Schmidt</a></p>
+
+<h2 id="wikipediaprogress">Wikipedia progress?</h2>
+
+<p><a href="https://en.wikipedia.org/w/index.php?title=Geometry_processing&amp;action=history">Geometry processing: Revision history</a></p>
+
+<p>Needs images!</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Category:Geometry_processing">Geometry processing category</a></p>
+
+<p>Category entry mining?</p>
+
+<h2 id="hw01">HW01</h2>
+
+<p><a href="https://github.com/alecjacobson/geometry-processing-introduction">HW01</a></p>
+
+<h2 id="wrappingupregistration">&#8220;wrapping up&#8221; registration</h2>
+
+<p><a href="registration.html#sofienbouazizsphdthesis">new notes for last lecture</a></p>
+
+<h3 id="smoothing">Smoothing</h3>
+
+<h3 id="smoothingadatasignalonasurface">Smoothing a data signal <em>on</em> a surface</h3>
+
+<figure>
+<img src="images/plane-smooth-signal.gif" alt="" />
+</figure>
+
+<h3 id="smoothingasurfaceitself">Smoothing <em>a surface itself</em></h3>
+
+<figure>
+<img src="images/plane-smooth-geometry.gif" alt="" />
+</figure>
+
+<h2 id="smoothing1ddata">Smoothing 1D data</h2>
+
+<p><a href="/Applications/MATLAB_R2017a.app">MATLAB Demo</a></p>
+
+<h3 id="smallstableexplicittimestep">Small stable explicit time step</h3>
+
+<figure>
+<img src="images/1d-smoothing-explicit-stable.gif" alt="" />
+</figure>
+
+<h3 id="smallunstableexplicittimestep">Small unstable explicit time step</h3>
+
+<figure>
+<img src="images/1d-smoothing-explicit-unstable.gif" alt="" />
+</figure>
+
+<h3 id="bigstableimplicittimestep">Big stable implicit time step</h3>
+
+<figure>
+<img src="images/1d-smoothing-implicit.gif" alt="" />
+</figure>
+<script>
+var images = $("figure img");
+$.each(images, function() {
+    $(this).replaceWith($("<a href='"+this.src+"'>"+this.outerHTML+"</a>"));
+    });
+</script>
+
+</body>
+</html>
