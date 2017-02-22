@@ -1,4 +1,4 @@
-title: Geometry Processing – Alignment and Registration
+title: Geometry Processing – Smoothing
 author: Alec Jacobson
 html header:  <link rel="stylesheet" href=../style.css>
 <link rel="stylesheet" href=style.css>
