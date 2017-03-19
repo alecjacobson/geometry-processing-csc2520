@@ -98,11 +98,15 @@ the particular application.
 | Wednesday, 15/02/2017 | [_Smoothing continued_](lecture-notes/smoothing.html), Spatial Laplacian, calculus of variations, Green's Identity _**[HW 04 assigned](https://github.com/alecjacobson/geometry-processing-parameterization), due 28/2/2017**_
 | Wednesday, 22/02/2017 | _Retroactively decided that this is Reading Week_, <br> [_Surface parameterization continued_](lecture-notes/parameterization-ryan-schmidt.pdf), role of trace in quadratic energies, minimizing quadratic energies in libigl |
 | Wednesday, 01/03/2017 | [**Shape deformation**](lecture-notes/deformation.html), continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible <br> "An intuitive framework for real-time freeform modeling" [Botsch & Kobbelt 2004] <br> "On linear variational surface deformation methods" [Botsch & Sorkine 2008] <br> "As-rigid-as-possible surface modeling" [Sorkine & Alexa 2007] <br> "Bounded Biharmonic Weights for Real-Time Deformation" [Jacobson et al. 2010] _**[HW 05 assigned](https://github.com/alecjacobson/geometry-processing-deformation) due 12/3/2017**_|
-| Wednesday, 08/03/2017 | **Curvature & surface analysis** |
-| Wednesday, 15/03/2017 | **Mesh decimation, simplification, remeshing**,  **Quad meshing** or **Subdivision surfaces** |
+| Wednesday, 08/03/2017 | [**Curvature & surface analysis**](lecture-notes/curvature.html) Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature <br> _Elementary Differential Geometry_, [Barret O'Neill 1966  <br> _Discrete Differential Geometry: An Applied Introduction_, SIGGRAPH Course, [Grinspun et al. 2005] |
+| Wednesday, 15/03/2017 | [_Curvature continued_](lecture-notes/curvature.html) Principal curvature, Gauss map, Euler's theorem, shape operator, Gaussian curvature <br> "Computing Discrete Minimal Surfaces and Their Conjugates" [Pinkall and Polthier 1993] <br> "Gaussian Curvature and Shell Structures" [Calladine 1986] <br> "Discrete differential-geometry operators for triangulated 2-manifolds" [Meyer et al. 2002] <br> _**[HW 06 assigned](https://github.com/alecjacobson/geometry-processing-curvature), due 22/3/2017**_
 | Wednesday, 22/03/2017 | **3D printing**, guest lecture by [Nobuyuki Umetani](http://nobuyuki-umetani.com) |
 | Wednesday, 29/03/2017 | **Signed distances, constructive solid geometry, voxelization** |
 | Wednesday, 05/04/2017 | **Final project presentations** |
+
+> Cutting room floor: **Mesh decimation, simplification, remeshing**,  **Quad
+> meshing**, **Subdivision surfaces**
+>
 
 ## Lateness Policy
 

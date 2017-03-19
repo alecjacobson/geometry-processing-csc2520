@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Geometry Processing – Curvature</title>
+	<meta name="author" content="Alec Jacobson"/>
+<link rel="stylesheet" href=../style.css>
+<link rel="stylesheet" href=style.css>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+
+<h1 id="geometryprocessing–curvature"><a href="../index.html">Geometry Processing</a> – Curvature</h1>
+
+<h2 id="wikipediaprogress">Wikipedia progress?</h2>
+
+<p><a href="https://en.wikipedia.org/w/index.php?title=Geometry_processing&amp;action=history">Geometry processing: Revision history</a></p>
+
+<h2 id="finalprojectupdates">Final Project Updates</h2>
+
+<h2 id="osculatingcircle">Osculating circle</h2>
+
+<figure>
+<img src="images/lissajous-curve-osculating-circle.gif" alt="" />
+</figure>
+
+<script>
+var images = $("figure img");
+$.each(images, function() {
+    $(this).replaceWith($("<a href='"+this.src+"'>"+this.outerHTML+"</a>"));
+    });
+</script>
+
+</body>
+</html>
