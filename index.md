@@ -101,12 +101,12 @@ the particular application.
 | Wednesday, 08/03/2017 | [**Curvature & surface analysis**](lecture-notes/curvature.html) Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature <br> _Elementary Differential Geometry_, [Barret O'Neill 1966  <br> _Discrete Differential Geometry: An Applied Introduction_, SIGGRAPH Course, [Grinspun et al. 2005] |
 | Wednesday, 15/03/2017 | [_Curvature continued_](lecture-notes/curvature.html) Principal curvature, Gauss map, Euler's theorem, shape operator, Gaussian curvature <br> "Computing Discrete Minimal Surfaces and Their Conjugates" [Pinkall and Polthier 1993] <br> "Gaussian Curvature and Shell Structures" [Calladine 1986] <br> "Discrete differential-geometry operators for triangulated 2-manifolds" [Meyer et al. 2002] <br> _**[HW 06 assigned](https://github.com/alecjacobson/geometry-processing-curvature), due 22/3/2017**_
 | Wednesday, 22/03/2017 | [**Moment integration**](lecture-notes/moment-nobuyuki-umetani.pdf), guest lecture by [Nobuyuki Umetani](http://nobuyuki-umetani.com) <br> 3D printing, density, mass, center of mass, moment of inertia, divergence theorem, simplex integration, balance. |
-| Wednesday, 29/03/2017 | **Signed distances, constructive solid geometry, voxelization** |
+| Wednesday, 29/03/2017 | [**Signed distances**](lecture-notes/signed-distance.html), Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> "Signed Distance Computation using the Angle Weighted Pseudo-normal" [Baerentzen & Aanaes 2005] <br> "3D distance fields: a survey of techniques and applications" [Jones et al. 2006] <br> "Robust Inside-Outside Segmentation using Generalized Winding Numbers" [Jacobson et al. 2013] [ 
 | Wednesday, 05/04/2017 | **Final project presentations** |
 
 > Cutting room floor: **Mesh decimation, simplification, remeshing**,  **Quad
-> meshing**, **Subdivision surfaces**
->
+> meshing**, **Subdivision surfaces**, **Constructive solid geometry**,
+> **Voxelization**
 
 ## Lateness Policy
 
