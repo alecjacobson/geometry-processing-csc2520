@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Geometry Processing Course</title>
+	<meta name="author" content="Klint Qinami, Alec Jacobson"/>
+<link rel="stylesheet" href=style.css>
+</head>
+<body>
+
+<h1 id="geometryprocessing">Geometry Processing</h1>
+
+<figure>
+<img src="images/libigl-teaser.jpg" alt="" />
+</figure>
+
+<p>Winter Term 2017<br/>
+CSC2521 [Topics in Computer Graphics: Geometry Processing]<br/>
+Prof. Alec Jacobson<br/>
+W 3&#8211;5 BA 5187 (via BA 5166) </p>
+
+<p>The class is aimed at preparing students for working with geometric data via
+understanding fundamental theoretical concepts. Students should have a
+background in <em>Linear Algebra</em> and <em>Computer Programming</em>. Previous
+experience with <em>Numerical Methods</em>, <em>Differential Equations</em>, and <em>Differential
+Geometry</em> is appreciated but not required.</p>
+
+<p>Extending traditional signal processing, <em>geometry processing</em> interprets
+three-dimensional curves and surfaces as signals. Just as audio and image
+signal data can be filtered, denoised and decomposed spectrally, so can the
+geometry of a three-dimensional curve or surface.</p>
+
+<p>In this course, we study the algorithms and mathematics behind fundamental
+operations for interpreting and manipulating geometric data. These essential
+tools enable: geometric modeling for computer aided design, life-like
+animations for computer graphics, reliable physical simulations, and robust
+scene representations for computer vision.</p>
+
+<p>Topics include: discrete curves and surfaces, curvature computation, surface
+reconstruction from point clouds, surface smoothing and denoising, mesh
+simplification, parameterization, symmetry detection, shape deformation and
+animation.</p>
+
+<h2 id="organization">Organization</h2>
+
+<p>In lecture we will cover the mathematical background and visual intuition of
+the week&#8217;s topic. At home, students will <strong><em>read academic papers</em></strong> and complete a
+small <strong><em>weekly</em></strong> programming assignment to implement a corresponding
+algorithm. By the end of the semester, these algorithms compose a toolbox that
+students can use to create a unique <em>artifact</em>: the <strong><em>final project</em></strong> is to
+use these tools to create a unique piece of geometry to visualize (as an image
+or interactive experience) or 3D print. </p>
+
+<h2 id="objectives">Objectives</h2>
+
+<ol>
+<li>Students should understand, derive, and implement solutions to the
+ prominent challenges that arise in geometry processing applications.</li>
+<li>Students should create a final creative project showcasing their
+ implementation of the different processing algorithms.</li>
+<li>Students should develop an understanding of the mathematical underpinnings
+ of geometry processing including useful discretized operators and energies.</li>
+<li>Students should develop a working knowledge of
+ <a href="http://libigl.github.io/libigl/">libigl</a> to develop these algorithms without
+ worrying about the grunt-work of
+ <a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a> viewers, quadrature, etc.</li>
+</ol>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Students should have already taken <strong>Linear Algebra</strong> and <strong>Calculus</strong>.</p>
+
+<p>Students should have already taken <strong>Introduction to Computer Science</strong> and
+should be <em>proficient</em> in computer programming (in any language) and should
+feel comfortable programming in <strong>C++</strong>.</p>
+
+<p>While knowledge of <strong>Partial Differential Equations</strong> <em>is not required</em>, it will
+certainly be very handy for derivations. A quick survey will be posted to help
+students evaluate their readiness on these topics.</p>
+
+<p>On the programming side, we will be coding mainly in <strong>C++</strong> and using a
+<a href="http://libigl.github.io/libigl/">libigl</a>, an open-source geometry processing
+library. We will be using <a href="http://eigen.tuxfamily.org">Eigen</a> for computational
+linear algebra, and <a href="http://cmake.org">Cmake</a> for building the coding
+assignments.</p>
+
+<h2 id="amathematicalfoundation">A Mathematical Foundation</h2>
+
+<p>Much of the framing for our techniques will be looking at the continuous
+analogue of our problem and discretizing it in an intrinsic way, preserving
+continuous theorems as much as possible. We will discretize continuous
+operators like the Laplacian and the Gradient, and we will find adequate
+representations of concepts like normal vectors and curvature. Perhaps
+surprisingly we will see that there are many choices of discretization, each
+with their own benefits and downsides, prompting us to choose appropriately for
+the particular application.</p>
+
+<h2 id="schedule">Schedule</h2>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Lecture Date</th>
+	<th style="text-align:left;">Tentative Topic</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Wednesday, 11/01/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/introduction.html"><strong>Geometry Processing Pipeline</strong></a>, shapes, surface representations, tangents and normals, <del>data structures, linear algebra</del>, topology, libigl. <br> <em>Polygon Mesh Processing</em> [Botsch et al. 2008] <br> <em><strong><a href="https://github.com/alecjacobson/geometry-processing-introduction">HW 00 assigned</a>, due 17/01/2017</strong></em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 18/01/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/mesh-reconstruction.html"><strong>Acquisition &amp; reconstruction</strong></a>, discrete topology, meshes, characteristic function, scattered data interpolation, spatial gradient, <del>spatial Laplacian</del>, linear least squares, <br> &#8220;Poisson surface reconstruction&#8221; [Kazhdan et al. 2006] <br> <em><strong><a href="https://github.com/alecjacobson/geometry-processing-mesh-reconstruction">HW 01 assigned</a> due 29/01/2017</strong></em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 25/01/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/registration.html"><strong>Alignment &amp; registration</strong></a> Hausdorff distance, point-to-plane distance, iterative closest point, orthogonal Procrustes problem, sampling points on surfaces <br> &#8220;Object modelling by registration of multiple range images&#8221; [Chen &amp; Medioni 1991] <br> &#8220;A method for registration of 3-D shapes&#8221; [Besl &amp; McKay 1992] <br> &#8220;Efficient Variants of the ICP Algorithm&#8221; [Rusinkiewicz &amp; Levoy 2001] <br> &#8220;Sparse Iterative Closest Point&#8221; [Bouaziz et al. 2013] <br> <em><strong><a href="https://github.com/alecjacobson/geometry-processing-registration">HW 02 assigned</a> due 5/2/2017</strong></em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 01/02/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/registration.html"><em>Alignment &amp; registration continued</em></a>, <a href="lecture-notes/smoothing.html"><strong>Surface fairing &amp; denoising</strong></a>, 1D smoothing flow, 1D energy-based smoothing, PDE, Implicit Time integration<br> <a href="http://ddg.cs.columbia.edu">Discrete Differential Geometry &#8220;Forum&#8221;</a><br> &#8220;Curve and surface smoothing without shrinkage&#8221; [Taubin 1995] <br> &#8220;Skeleton extraction by mesh contraction&#8221; [Au et al. 2008]<br> &#8220;Can Mean-Curvature Flow Be Made Non-Singular&#8221; [Kazhdan et al. 2005]<br><em><strong><a href="https://github.com/alecjacobson/geometry-processing-smoothing">HW 03 assigned</a> due 13/2/2016</strong></em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 08/02/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/parameterization-ryan-schmidt.pdf"><strong>Surface parameterization</strong></a>, Guest lecture by <a href="http://www.rms80.com">Ryan Schmidt</a>, texture mapping, mass-spring methods, graph drawing, harmonic maps, least squares conformal mapping, local parameterization, discrete exponential map, stroke parameterization <br> &#8220;Intrinsic parameterizations of surface meshes&#8221; [Desbrun et al. 2002] <br> &#8220;Least squares conformal maps for automatic texture atlas generation&#8221; [Lévy et al. 2002] <br> &#8220;Spectral conformal parameterization&#8221; [Mullen et al. 2008]</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 15/02/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/smoothing.html"><em>Smoothing continued</em></a>, Spatial Laplacian, calculus of variations, Green&#8217;s Identity <em><strong><a href="https://github.com/alecjacobson/geometry-processing-parameterization">HW 04 assigned</a>, due 28/2/2017</strong></em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 22/02/2017</td>
+	<td style="text-align:left;"><em>Retroactively decided that this is Reading Week</em>, <br> <a href="lecture-notes/parameterization-ryan-schmidt.pdf"><em>Surface parameterization continued</em></a>, role of trace in quadratic energies, minimizing quadratic energies in libigl</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 01/03/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/deformation.html"><strong>Shape deformation</strong></a>, continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible <br> &#8220;An intuitive framework for real-time freeform modeling&#8221; [Botsch &amp; Kobbelt 2004] <br> &#8220;On linear variational surface deformation methods&#8221; [Botsch &amp; Sorkine 2008] <br> &#8220;As-rigid-as-possible surface modeling&#8221; [Sorkine &amp; Alexa 2007] <br> &#8220;Bounded Biharmonic Weights for Real-Time Deformation&#8221; [Jacobson et al. 2010] <em><strong><a href="https://github.com/alecjacobson/geometry-processing-deformation">HW 05 assigned</a> due 12/3/2017</strong></em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 08/03/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/curvature.html"><strong>Curvature &amp; surface analysis</strong></a> Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature <br> <em>Elementary Differential Geometry</em>, [Barret O&#8217;Neill 1966 <br> <em>Discrete Differential Geometry: An Applied Introduction</em>, SIGGRAPH Course, [Grinspun et al. 2005]</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 15/03/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/curvature.html"><em>Curvature continued</em></a> Principal curvature, Gauss map, Euler&#8217;s theorem, shape operator, Gaussian curvature <br> &#8220;Computing Discrete Minimal Surfaces and Their Conjugates&#8221; [Pinkall and Polthier 1993] <br> &#8220;Gaussian Curvature and Shell Structures&#8221; [Calladine 1986] <br> &#8220;Discrete differential-geometry operators for triangulated 2-manifolds&#8221; [Meyer et al. 2002] <br> <em><strong><a href="https://github.com/alecjacobson/geometry-processing-curvature">HW 06 assigned</a>, due 22/3/2017</strong></em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 22/03/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/moment-nobuyuki-umetani.pdf"><strong>Moment integration</strong></a>, guest lecture by <a href="http://nobuyuki-umetani.com">Nobuyuki Umetani</a> <br> 3D printing, density, mass, center of mass, moment of inertia, divergence theorem, simplex integration, balance.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 29/03/2017</td>
+	<td style="text-align:left;"><a href="lecture-notes/signed-distance.html"><strong>Signed distances</strong></a>, Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> &#8220;Signed Distance Computation using the Angle Weighted Pseudo-normal&#8221; [Baerentzen &amp; Aanaes 2005] <br> &#8220;3D distance fields: a survey of techniques and applications&#8221; [Jones et al. 2006] <br> &#8220;Robust Inside-Outside Segmentation using Generalized Winding Numbers&#8221; [Jacobson et al. 2013] [</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Wednesday, 05/04/2017</td>
+	<td style="text-align:left;"><strong>Final project presentations</strong></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Cutting room floor: <strong>Mesh decimation, simplification, remeshing</strong>, <strong>Quad
+meshing</strong>, <strong>Subdivision surfaces</strong>, <strong>Constructive solid geometry</strong>,
+<strong>Voxelization</strong></p>
+</blockquote>
+
+<h2 id="latenesspolicy">Lateness Policy</h2>
+
+<p>0.007% off for every minute late.</p>
+
+<h2 id="supplementaltextbook">Supplemental Textbook</h2>
+
+<p><a href="https://www.amazon.ca/Polygon-Mesh-Processing-Mario-Botsch/dp/1568814267/"><em>Polygon Mesh
+Processing</em></a>.
+Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.</p>
+
+<h2 id="grading">Grading</h2>
+
+<ul>
+<li>50% small assignments</li>
+<li>25% final project:
+
+<ul>
+<li>in-class presentation</li>
+<li>formal two-page <a href="http://s2017.siggraph.org/talks-submissions">technical extended
+ abstract</a></li>
+<li>(less formal) in depth documentation</li>
+<li>it&#8217;s great if you can align with your research, but please discuss this
+ with me early on.</li>
+</ul></li>
+<li>20% participation: in class, reading papers, answering &#8220;Issues&#8221; on
+ assignments</li>
+<li>5% full-class collaborative project: improve
+ <a href="https://en.wikipedia.org/wiki/Geometry_processing">https://en.wikipedia.org/wiki/Geometry_processing</a>
+ and <a href="https://en.wikipedia.org/wiki/Category:Geometry_processing">related
+ topics</a>
+
+<ul>
+<li>Graded based on delta of this page between now and end of term</li>
+<li>Grade is shared by entire class</li>
+</ul></li>
+</ul>
+
+</body>
+</html>
