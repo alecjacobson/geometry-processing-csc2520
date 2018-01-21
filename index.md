@@ -7,7 +7,7 @@ html header:  <link rel="stylesheet" href=style.css>
 ![](images/libigl-teaser.jpg)
 
 Winter Term 2018  
-CSC2520H [Geometry Processing]  
+CSC2520H Geometry Processing  
 Prof. Alec Jacobson  
 W 3-5 BA 5187 (via BA 5166)  
 
@@ -91,7 +91,7 @@ the particular application.
 | Lecture Date          | Tentative Topic |
 |:----------------------|:--|
 | Wednesday, 10/01/2018 | [**Geometry Processing Pipeline**](lecture-notes/introduction.html), shapes, surface representations, tangents and normals, data structures, linear algebra, topology, libigl. <br> _Polygon Mesh Processing_ [Botsch et al. 2008] <br> _**[HW 00 assigned](https://github.com/alecjacobson/geometry-processing-introduction), due 17/01/2018**_
-| Wednesday, 17/01/2018 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.html), discrete topology, meshes, characteristic function, scattered data interpolation, spatial gradient, linear least squares, <br> "Poisson surface reconstruction" [Kazhdan et al. 2006] <br> <!-- _**[HW 01 assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction) due ??/??/2018**_ -->
+| Wednesday, 17/01/2018 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.html), discrete topology, meshes, characteristic function, scattered data interpolation, spatial gradient, linear least squares, <br> "Poisson surface reconstruction" [Kazhdan et al. 2006] <br>  _**[HW 01 assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction) due 29/01/2018**_
 | Wednesday, 24/01/2018 | [**Alignment & registration**](lecture-notes/registration.html) Hausdorff distance, point-to-plane distance, iterative closest point, orthogonal Procrustes problem, sampling points on surfaces <br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Efficient Variants of the ICP Algorithm" [Rusinkiewicz & Levoy 2001] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> <!-- _**[HW 02 assigned](https://github.com/alecjacobson/geometry-processing-registration) due ??/??/2018**_ | -->
 | Wednesday, 31/01/2018 | [**Surface fairing & denoising**](lecture-notes/smoothing.html), 1D smoothing flow, 1D energy-based smoothing, PDE, Implicit Time integration<br> [Discrete Differential Geometry "Forum"](http://ddg.cs.columbia.edu)<br> "Curve and surface smoothing without shrinkage" [Taubin 1995] <br> "Skeleton extraction by mesh contraction" [Au et al. 2008]<br> "Can Mean-Curvature Flow Be Made Non-Singular" [Kazhdan et al. 2005]<br><!-- _**[HW 03 assigned](https://github.com/alecjacobson/geometry-processing-smoothing) due ??/??/2018**_| -->
 | Wednesday, 07/02/2018 | [_Smoothing continued_](lecture-notes/smoothing.html), Spatial Laplacian, calculus of variations, Green's Identity, role of trace in quadratic energies, minimizing quadratic energies in libigl <br> <!-- _**[HW 04 assigned](https://github.com/alecjacobson/geometry-processing-parameterization), due ??/??/2018**_  -->
