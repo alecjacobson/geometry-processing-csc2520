@@ -6,7 +6,7 @@ html header:  <link rel="stylesheet" href=style.css>
 
 ![](images/libigl-teaser.jpg)
 
-Winter Term 2018  
+Fall Term 2018  
 CSC2520H Geometry Processing  
 CSC490H1 Capstone Design: Geometry Processing  
 Prof. Alec Jacobson  
