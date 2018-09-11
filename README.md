@@ -6,6 +6,7 @@ Fall Term 2018
 CSC2520H Geometry Processing  
 CSC490H1 Capstone Design: Geometry Processing  
 Prof. Alec Jacobson  
+TA, Michael Tao  
 T 3-5 MP 137  
 
 The class is aimed at preparing students for working with geometric data via
