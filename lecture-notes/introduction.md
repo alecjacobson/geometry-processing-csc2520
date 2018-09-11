@@ -1,10 +1,3 @@
-title: Geometry Processing – Introduction
-author: Alec Jacobson
-html header:  <link rel="stylesheet" href=../style.css>
-<link rel="stylesheet" href=style.css>
-<script
-src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
 # [Geometry Processing](../) – Introduction
 
 ## Laser Scanning
@@ -93,10 +86,3 @@ Wikipedia](https://en.wikipedia.org/wiki/Geometry_processing)
 ### libigl is a C++ library for Geometry Processing
 
 [libigl tutorial](http://libigl.github.io/libigl/tutorial/tutorial.html)
-
-<script>
-var images = $("figure img");
-$.each(images, function() {
-    $(this).replaceWith($("<a href='"+this.src+"'>"+this.outerHTML+"</a>"));
-    });
-</script>

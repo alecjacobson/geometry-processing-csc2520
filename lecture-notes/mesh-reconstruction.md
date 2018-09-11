@@ -1,11 +1,3 @@
-title: Geometry Processing – Mesh Reconstruction
-author: Alec Jacobson
-html header:  <link rel="stylesheet" href=../style.css>
-<link rel="stylesheet" href=style.css>
-<script
-src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-
 # [Geometry Processing](../index.html) – Mesh Reconstruction
 
 ## Wikipedia progress?
@@ -95,28 +87,3 @@ allowfullscreen></iframe>
 
 [Kazhdan et al. 2006]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-var images = $("figure img");
-$.each(images, function() {
-    $(this).replaceWith($("<a href='"+this.src+"'>"+this.outerHTML+"</a>"));
-    });
-</script>
