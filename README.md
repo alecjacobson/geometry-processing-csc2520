@@ -1,7 +1,3 @@
-title: Geometry Processing Course
-author: Alec Jacobson
-html header:  <link rel="stylesheet" href=style.css>
-
 # Geometry Processing
 
 ![](images/libigl-teaser.jpg)
