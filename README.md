@@ -1,5 +1,7 @@
 # Geometry Processing
 
+[Register your email address for the class](https://goo.gl/forms/5d1luoU2QPlPky0h2)
+
 ![](images/libigl-teaser.jpg)
 
 Fall Term 2018  
