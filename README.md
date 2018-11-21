@@ -99,13 +99,14 @@ the particular application.
 | Tuesday, 23/10/2018 | [**Surface parameterization**](lecture-notes/parameterization-ryan-schmidt.pdf), texture mapping, mass-spring methods, graph drawing, harmonic maps, least squares conformal mapping, local parameterization, discrete exponential map, stroke parameterization <br> "Intrinsic parameterizations of surface meshes" [Desbrun et al. 2002] <br> "Least squares conformal maps for automatic texture atlas generation" [Lévy et al. 2002] <br> "Spectral conformal parameterization" [Mullen et al. 2008] <br> "Interactive Decal Compositing with Discrete Exponential Maps" [Schmidt et al. 2006] <br>  _**[HW 05 assigned](https://github.com/alecjacobson/geometry-processing-parameterization), due 30/10/2018**_     
 | Tuesday, 30/10/2018 | [**Curvature & surface analysis**](lecture-notes/curvature.md) Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature Principal curvature, Gauss map, Euler's theorem, shape operator, Gaussian curvature <br> "Computing Discrete Minimal Surfaces and Their Conjugates" [Pinkall and Polthier 1993] <br> "Gaussian Curvature and Shell Structures" [Calladine 1986] <br> "Discrete differential-geometry operators for triangulated 2-manifolds" [Meyer et al. 2002] <br> _Elementary Differential Geometry_, [Barret O'Neill 1966  <br> _Discrete Differential Geometry: An Applied Introduction_, SIGGRAPH Course, [Grinspun et al. 2005] <br> _**[HW 06 assigned](https://github.com/alecjacobson/geometry-processing-curvature) due 13/11/2018**_
 | Tuesday, 06/11/2018 | **_No Lecture: FAS Reading week._** 
-| Tuesday, 13/11/2018 | **Subdivision surfaces** <br> "Subdivision for Modeling and Animation" [Zorin et al. 2000]
-| Tuesday, 20/11/2018 | **Mesh decimation, simplification, remeshing**  <br> "Surface Simplification Using Quadric Error Metrics" [Garland and Heckbert 1997] <br> "A Remeshing Approach to Multiresolution Modeling" [Botsch and Kobbelt 2004]
-| Tuesday, 27/11/2018 | [**Signed distances**](lecture-notes/signed-distance.md), Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> "Signed Distance Computation using the Angle Weighted Pseudo-normal" [Baerentzen & Aanaes 2005] <br> "3D distance fields: a survey of techniques and applications" [Jones et al. 2006] <br> "Robust Inside-Outside Segmentation using Generalized Winding Numbers" [Jacobson et al. 2013]
-| Tuesday, 04/12/2018 | **Final project presentations** |
+| Tuesday, 13/11/2018 | [**Curvature, continued**](lecture-notes/curvature.md) 
+| Tuesday, 20/11/2018 | [**Signed distances**](lecture-notes/signed-distance.md), Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> "Signed Distance Computation using the Angle Weighted Pseudo-normal" [Baerentzen & Aanaes 2005] <br> "3D distance fields: a survey of techniques and applications" [Jones et al. 2006] <br> "Robust Inside-Outside Segmentation using Generalized Winding Numbers" [Jacobson et al. 2013]
+| Tuesday, 27/11/2018 | Guest Lecture by Dr. Etienne Corman, **Functional Maps**
+| <del>Tuesday, 04/12/2018</del> | |
+| Friday, 14/12/2018 **2pm** | **Final project presentations** in room BA5166 |
 
 > Cutting room floor: **Quad meshing**, **Subdivision surfaces**, **Constructive
-> solid geometry**, **Voxelization**
+> solid geometry**, **Voxelization**,  **Subdivision surfaces**, **Mesh decimation, simplification, remeshing**
 
 ## Slack
 
