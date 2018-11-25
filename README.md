@@ -103,7 +103,7 @@ the particular application.
 | Tuesday, 20/11/2018 | [**Signed distances**](lecture-notes/signed-distance.md), Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> "Signed Distance Computation using the Angle Weighted Pseudo-normal" [Baerentzen & Aanaes 2005] <br> "3D distance fields: a survey of techniques and applications" [Jones et al. 2006] <br> "Robust Inside-Outside Segmentation using Generalized Winding Numbers" [Jacobson et al. 2013]
 | Tuesday, 27/11/2018 | Guest Lecture by Dr. Etienne Corman, **Functional Maps**
 | <del>Tuesday, 04/12/2018</del> | |
-| Friday, 14/12/2018 **2pm** | **Final project presentations** in room BA5166 |
+| Tuesday, 11/12/2018 **3pm** | **Final project presentations** in dgp seminar room through BA5166 |
 
 > Cutting room floor: **Quad meshing**, **Subdivision surfaces**, **Constructive
 > solid geometry**, **Voxelization**,  **Subdivision surfaces**, **Mesh decimation, simplification, remeshing**
