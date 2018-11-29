@@ -128,7 +128,7 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
 - 25% final project: 
     - in-class presentation
     - formal two-page [technical extended
-      abstract](http://s2017.siggraph.org/talks-submissions)
+      abstract](https://s2019.siggraph.org/conference/programs-events/talks/talks-submissions/)
     - (less formal) in depth documentation
     - it's great if you can align with your research, but please discuss this
       with me early on.
