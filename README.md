@@ -89,7 +89,7 @@ the particular application.
 
 | Lecture Date          | Tentative Topic |
 |:----------------------|:--|
-| Wednesday, 16/09/2020 | [**Geometry Processing Pipeline**](lecture-notes/introduction.md), "life of a shape", shapes, surface representations, <br> _Polygon Mesh Processing_ [Botsch et al. 2008] <br> _**[Intro Survey](https://forms.gle/xvFbFWJqKvfXMT317), due 12:00 noon ET 22/09/2020**_ <br> <!--_**[HW 01 assigned](https://github.com/alecjacobson/geometry-processing-introduction), due 12:00 noon ET 22/09/2020**_-->
+| Wednesday, 16/09/2020 | [**Geometry Processing Pipeline**](lecture-notes/introduction.md), "life of a shape", shapes, surface representations, <br> _Polygon Mesh Processing_ [Botsch et al. 2008] <br> _**[Intro Survey](https://forms.gle/xvFbFWJqKvfXMT317), due 12:00 noon ET 22/09/2020**_ <br> _**[HW 01 assigned](https://github.com/alecjacobson/geometry-processing-introduction), due 12:00 noon ET 22/09/2020**_
 | Wednesday, 23/09/2020 | tangents and normals, geometry vs. topology, orientability, discrete topology, meshes, data structures 
 | Wednesday, 30/09/2020 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.md), characteristic function, spatial gradient
 | Wednesday, 07/10/2020 | [**Alignment & registration**](lecture-notes/registration.md) Hausdorff distance, integrated closest point distance<br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Efficient Variants of the ICP Algorithm" [Rusinkiewicz & Levoy 2001] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> point-to-plane distance, iterative closest point, orthogonal Procrustes problem
