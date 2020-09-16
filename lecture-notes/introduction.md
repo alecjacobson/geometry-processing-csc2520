@@ -66,7 +66,7 @@ al. 2016]
 
 ### Spectral analysis of an image
 
-![](images/lena-spectral.jpg)
+![](https://i.stack.imgur.com/mGvJv.jpg)
 
 [Source](http://imagejdocu.tudor.lu/doku.php?id=gui:process:fft)
 
