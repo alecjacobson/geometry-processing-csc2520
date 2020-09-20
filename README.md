@@ -109,9 +109,9 @@ the particular application.
 > solid geometry**, **Voxelization**,  **Subdivision surfaces**, **Mesh decimation, simplification, remeshing**
 -->
 
-## Slack
+## Discord
 
-dgp-graphics.slack.com, \#geometry-processing channel, ask dgp member for invite
+https://discord.gg/swMZ92H
 
 ## Lateness Policy
 
