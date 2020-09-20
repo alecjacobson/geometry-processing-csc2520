@@ -7,7 +7,8 @@ CSC419H1 Geometry Processing
 CSC2520H Geometry Processing  
 Prof. Alec Jacobson  
 TAs, Sarah Kushner, Jiayi Eris Zhang  
-W 3-5 Zoom
+W 3-5 Zoom. 
+Office Hours: W 5-6 Zoom
 
 The class is aimed at preparing students for working with geometric data via
 understanding fundamental theoretical concepts. Students should have a
