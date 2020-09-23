@@ -8,9 +8,8 @@
 
 ## Klein bottle
 
-<video controls loop autoplay>
-<source src=videos/klein-bottle.m4v>
-</video>
+
+![](images/klein1.gif)
 
 [+plus magazine](https://plus.maths.org/content/introducing-klein-bottle)
 
@@ -61,9 +60,7 @@ Has _undirected_ and directed edges:
 
 ## Ivan Sutherland's Sketchpad
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/USyoT_Ha_bA?start=354" frameborder="0"
-allowfullscreen></iframe>
+https://www.youtube.com/embed/USyoT_Ha_bA?start=354
 
 [Sketchpad: A man-machine graphical communication system](https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-574.pdf)
 
