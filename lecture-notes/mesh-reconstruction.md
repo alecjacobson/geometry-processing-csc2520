@@ -21,17 +21,13 @@
 
 ## Sphere eversion
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/R_w4HYXuo9M" frameborder="0"
-allowfullscreen></iframe>
+https://www.youtube.com/watch?v=BVVfs4zKrgk (play 0:00 to 1:40)
 
 ## Coffee Mug → Donut
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/9NlqYr6-TpA?start=43" frameborder="0"
-allowfullscreen></iframe>
-
 ![](images/coffee-mug-to-donut.gif)
+
+https://www.youtube.com/embed/9NlqYr6-TpA?start=43 (just a few secs)
 
 [Wikipedia](https://en.wikipedia.org/wiki/Genus\_(mathematics))
 
