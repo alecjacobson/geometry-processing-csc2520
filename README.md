@@ -92,17 +92,17 @@ the particular application.
 |:----------------------|:--|
 | Wednesday, 16/09/2020 | [**Geometry Processing Pipeline**](lecture-notes/introduction.md), "life of a shape", shapes, surface representations, <br> _Polygon Mesh Processing_ [Botsch et al. 2008] <br> _**[Intro Survey](https://forms.gle/xvFbFWJqKvfXMT317), due 12:00 noon ET 22/09/2020**_ <br> _**[HW 01 assigned](https://github.com/alecjacobson/geometry-processing-introduction), due 12:00 noon ET 22/09/2020**_
 | Wednesday, 23/09/2020 | [**Representations, Topology vs Geometry**](lecture-notes/mesh-reconstruction.md) tangents and normals, geometry vs. topology, orientability, discrete topology, graphs <br> _**[HW 02 assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), due 12:00 noon ET 02/10/2020**_
-| Wednesday, 30/09/2020 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.md), characteristic function, spatial gradient
-| Wednesday, 07/10/2020 | [**Alignment & registration**](lecture-notes/registration.md) Hausdorff distance, integrated closest point distance<br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Efficient Variants of the ICP Algorithm" [Rusinkiewicz & Levoy 2001] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> point-to-plane distance, iterative closest point, orthogonal Procrustes problem
-| Wednesday, 14/10/2020 | [**Surface fairing & denoising**](lecture-notes/smoothing.md), 1D smoothing flow, 1D energy-based smoothing, PDE, Implicit Time integration
-| Wednesday, 21/10/2020 | [**Shape deformation**](lecture-notes/deformation.md), continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible 
-| Wednesday, 28/10/2020 | [**Surface parameterization**](lecture-notes/parameterization-ryan-schmidt.pdf), texture mapping, mass-spring methods, graph drawing, harmonic maps, least squares conformal mapping, local parameterization, discrete exponential map, stroke parameterization 
+| Wednesday, 30/09/2020 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.md), characteristic function, spatial gradient <br> [HW 03 (not yet) assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), tentatively due 12:00 noon ET 09/10/2020
+| Wednesday, 07/10/2020 | [**Alignment & registration**](lecture-notes/registration.md) Hausdorff distance, integrated closest point distance<br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Efficient Variants of the ICP Algorithm" [Rusinkiewicz & Levoy 2001] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> point-to-plane distance, iterative closest point, orthogonal Procrustes problem <br> [HW 04 (not yet) assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), tentatively due 12:00 noon ET 16/10/2020
+| Wednesday, 14/10/2020 | [**Surface fairing & denoising**](lecture-notes/smoothing.md), 1D smoothing flow, 1D energy-based smoothing, PDE, Implicit Time integration <br> [HW 05 (not yet) assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), tentatively due 12:00 noon ET 23/10/2020
+| Wednesday, 21/10/2020 | [**Shape deformation**](lecture-notes/deformation.md), continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible  <br> [HW 06 (not yet) assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), tentatively due 12:00 noon ET 30/10/2020
+| Wednesday, 28/10/2020 | [**Surface parameterization**](lecture-notes/parameterization-ryan-schmidt.pdf), texture mapping, mass-spring methods, graph drawing, harmonic maps, least squares conformal mapping, local parameterization, discrete exponential map, stroke parameterization <br> [HW 07 (not yet) assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), tentatively due 12:00 noon ET 06/11/2020
 | Wednesday, 04/11/2020 | [**Curvature & surface analysis**](lecture-notes/curvature.md) Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature Principal curvature, Gauss map, Euler's theorem, shape operator, Gaussian curvature 
 | Wednesday, 11/11/2020 | **_No Lecture: FAS Reading week._** 
-| Wednesday, 18/11/2020 | [**Curvature, continued**](lecture-notes/curvature.md) 
+| Wednesday, 18/11/2020 | [**Curvature, continued**](lecture-notes/curvature.md) <br> [Possible HW 08 (not yet) assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), tentatively due 12:00 noon ET 13/11/2020
 | Wednesday, 25/11/2020 | [**Signed distances**](lecture-notes/signed-distance.md), Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> "Signed Distance Computation using the Angle Weighted Pseudo-normal" [Baerentzen & Aanaes 2005] <br> "3D distance fields: a survey of techniques and applications" [Jones et al. 2006] <br> "Robust Inside-Outside Segmentation using Generalized Winding Numbers" [Jacobson et al. 2013]
 | Wednesday, 02/12/2020 | **Quad meshing**, **Subdivision surfaces**
-| Wednesday, 09/12/2020 | **Constructive solid geometry**, **Voxelization**,  **Subdivision surfaces**, **Mesh decimation, simplification, remeshing**
+| Wednesday, 09/12/2020 | **Constructive solid geometry**, **Voxelization**,  **Subdivision surfaces**, **Mesh decimation, simplification, remeshing** <br> **_libigl-style paper implementation due 12:00 noon ET 09/12/2020_**
 
 <!--
 > Cutting room floor: **Quad meshing**, **Subdivision surfaces**, **Constructive
@@ -117,6 +117,12 @@ https://discord.gg/swMZ92H
 
 0.007% off for every minute late.
 
+## Academic Integrity
+
+Any code must belong to the student submitting it. Submitted assignments may be automatically analyzed to identify suspicious levels of code similarity. Consequences of committing an academic offence can be severe.
+
+By staying enrolled in this course, students acknowledge that they have read and understand the University of Toronto's definitions and policy on Academic Integrity.
+
 ## Supplemental Textbook
 
 [_Polygon Mesh
@@ -125,7 +131,7 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
 
 ## Grading
 
-- 73% small assignments
+- 73% small assignments (equal weighting per-assignment)
 - 17% libigl-style paper implementation
 - 10% [Toronto Geometry Colloquium](https://toronto-geometry-colloquium.github.io/) participation
 
