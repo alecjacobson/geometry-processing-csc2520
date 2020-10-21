@@ -54,21 +54,11 @@ Needs **citations**!
 
 ## Goal: reposing or iterating a design of an existing shape
 
-<video controls loop>
-<source src=videos/armadillo-editing-make-it-stand.mov>
-</video>
-
-## Goal: animation
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/hldCtjT9baI" frameborder="0"
-allowfullscreen></iframe>
+[videos/armadillo-editing-make-it-stand.mov](videos/armadillo-editing-make-it-stand.mov)
 
 ## Goal: physical effects
 
-<video controls loop>
-<source src=videos/big-buck-bunny-torus-sphere-hyperelastic-materials.mp4>
-</video>
+[videos/big-buck-bunny-torus-sphere-hyperelastic-materials.mp4](videos/big-buck-bunny-torus-sphere-hyperelastic-materials.mp4)
 
 
 ## Handle-based deformation: selected transformed regions
