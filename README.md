@@ -135,6 +135,45 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
 - 17% libigl-style paper implementation
 - 10% [Toronto Geometry Colloquium](https://toronto-geometry-colloquium.github.io/) participation
 
+## Final Paper Implementation
+
+ - A concise and provably informative multi‐scale signature based on heat diffusion
+ - A Laplacian for Nonmanifold Triangle Meshes
+ - A Symmetric Objective Function for ICP 
+ - An Adaptive Multi-Grid Solver for Applications in Computer Graphics
+ - Anisotropic geometric diffusion in surface processing
+ - Appearance Mimicking Surfaces
+ - Biharmonic Distance
+ - Can Mean-Curvature Flow be Modified to be Non-singular?
+ - Complementary Dynamics
+ - Compressed manifold harmonics
+ - Compressed vibration modes of elastic bodies
+ - Cubic Stylization
+ - Deep Geometric Texture Synthesis
+ - Developability of Heightfields via Rank Minimization
+ - Diffusion Curves: A Vector Representation for Smooth-Shaded Images
+ - Discrete Differential Operators on Polygonal Meshes
+ - Fast Approximation of Laplace-Beltrami Eigenproblems
+ - Gaussian-Product Subdivision Surfaces
+ - Harmonic Triangulations
+ - Instant Field-Aligned Meshes
+ - Interpolated Corrected Curvature Measures for Polygonal Surfaces
+ - Laplace Operators for Tetrahedral Meshes
+ - LSMAT Least Squares Medial Axis Transform
+ - Make it stand: balancing shapes for 3D fabrication
+ - Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains
+ - Packing Irregular Objects in 3D Space via Hybrid Optimization
+ - Parallel Globally Consistent Normal Orientation of Raw Unorganized Point Clouds
+ - Phong Deformation: A Better CO Interpolant for Embedded Deformation
+ - SAL: Sign Agnostic Learning of Shapes from Raw Data
+ - Signing the Unsigned: Robust Surface Reconstruction from Raw Pointsets
+ - Stable Neo-Hookean Flesh Simulation
+ - Stripe Patterns on Surfaces
+ - Surface Reconstruction Based on Modified Gauss Formula
+ - Variational Surface Cutting
+ - Vector Heat Method
+ - You Can Find Geodesic Paths in Triangle Meshes by Just Flipping Edges
+
 
 <!-- 
 cat header.md README.md | multimarkdown --process-html -o README.html && open README.html
