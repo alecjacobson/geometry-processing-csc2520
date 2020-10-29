@@ -95,8 +95,9 @@ the particular application.
 | Wednesday, 30/09/2020 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.md), characteristic function, spatial gradient <br> **_[HW 03 assigned](https://github.com/alecjacobson/geometry-processing-registration), due 12:00 noon ET 10/10/2020_**
 | Wednesday, 07/10/2020 | [**Alignment & registration**](lecture-notes/registration.md) Hausdorff distance, integrated closest point distance<br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Efficient Variants of the ICP Algorithm" [Rusinkiewicz & Levoy 2001] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> point-to-plane distance, iterative closest point, orthogonal Procrustes problem <br> **_[HW 04 assigned](https://github.com/alecjacobson/geometry-processing-smoothing),  due 12:00 noon ET 19/10/2020_**
 | Wednesday, 14/10/2020 | [**Surface fairing & denoising**](lecture-notes/smoothing.md), 1D smoothing flow, 1D energy-based smoothing, PDE, Implicit Time integration <br> **_[HW 05 assigned](https://github.com/alecjacobson/geometry-processing-deformation), tentatively due 12:00 noon ET 27/10/2020_**
-| Wednesday, 21/10/2020 | [**Shape deformation**](lecture-notes/deformation.md), continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible  <br> **_[HW 06 assigned](https://github.com/alecjacobson/geometry-processing-parameterization), due 12:00 noon ET 03/11/2020_**
-| Wednesday, 28/10/2020 | [**Surface parameterization**](lecture-notes/parameterization-ryan-schmidt.pdf), texture mapping, mass-spring methods, graph drawing, harmonic maps, least squares conformal mapping, local parameterization, discrete exponential map, stroke parameterization <br> [HW 07 (not yet) assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), tentatively due 12:00 noon ET 06/11/2020
+| Wednesday, 21/10/2020 | [**Shape deformation**](lecture-notes/deformation.md), continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible  <br> **_[HW 06 assigned](https://github.com/alecjacobson/geometry-processing-parameterization), due 12:00 noon ET 03/11/2020_** 
+| Wednesday, 28/10/2020 | [**Surface parameterization**](lecture-notes/parameterization-ryan-schmidt.pdf), texture mapping, mass-spring methods, graph drawing, harmonic maps, least squares conformal mapping, local parameterization, discrete exponential map, stroke parameterization <br>
+**_[Final implementation paper signup assigned](https://forms.gle/QM8nvvxRDQrd4ix6A)), due 12:00 noon ET 05/11/2020_** <br> [HW 07 (not yet) assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), tentatively due 12:00 noon ET 06/11/2020
 | Wednesday, 04/11/2020 | [**Curvature & surface analysis**](lecture-notes/curvature.md) Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature Principal curvature, Gauss map, Euler's theorem, shape operator, Gaussian curvature 
 | Wednesday, 11/11/2020 | **_No Lecture: FAS Reading week._** 
 | Wednesday, 18/11/2020 | [**Curvature, continued**](lecture-notes/curvature.md) <br> [Possible HW 08 (not yet) assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), tentatively due 12:00 noon ET 13/11/2020
@@ -136,6 +137,8 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
 - 10% [Toronto Geometry Colloquium](https://toronto-geometry-colloquium.github.io/) participation
 
 ## Final Paper Implementation
+
+[Sign up by 12 noon 05/11/2020](https://forms.gle/QM8nvvxRDQrd4ix6A)
 
  - A concise and provably informative multi‐scale signature based on heat diffusion
  - A Laplacian for Nonmanifold Triangle Meshes
