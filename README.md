@@ -139,42 +139,42 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
 
 [Sign up by 12 noon 05/11/2020](https://forms.gle/QM8nvvxRDQrd4ix6A)
 
- - A concise and provably informative multi‐scale signature based on heat diffusion
- - A Laplacian for Nonmanifold Triangle Meshes
- - A Symmetric Objective Function for ICP 
- - An Adaptive Multi-Grid Solver for Applications in Computer Graphics
- - Anisotropic geometric diffusion in surface processing
- - Appearance Mimicking Surfaces
- - Biharmonic Distance
- - Can Mean-Curvature Flow be Modified to be Non-singular?
- - Complementary Dynamics
- - Compressed manifold harmonics
- - Compressed vibration modes of elastic bodies
- - Cubic Stylization
- - Deep Geometric Texture Synthesis
- - Developability of Heightfields via Rank Minimization
- - Diffusion Curves: A Vector Representation for Smooth-Shaded Images
- - Discrete Differential Operators on Polygonal Meshes
- - Fast Approximation of Laplace-Beltrami Eigenproblems
- - Gaussian-Product Subdivision Surfaces
- - Harmonic Triangulations
- - Instant Field-Aligned Meshes
- - Interpolated Corrected Curvature Measures for Polygonal Surfaces
- - Laplace Operators for Tetrahedral Meshes
- - LSMAT Least Squares Medial Axis Transform
- - Make it stand: balancing shapes for 3D fabrication
- - Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains
- - Packing Irregular Objects in 3D Space via Hybrid Optimization
- - Parallel Globally Consistent Normal Orientation of Raw Unorganized Point Clouds
- - Phong Deformation: A Better CO Interpolant for Embedded Deformation
- - SAL: Sign Agnostic Learning of Shapes from Raw Data
- - Signing the Unsigned: Robust Surface Reconstruction from Raw Pointsets
- - Stable Neo-Hookean Flesh Simulation
- - Stripe Patterns on Surfaces
- - Surface Reconstruction Based on Modified Gauss Formula
- - Variational Surface Cutting
- - Vector Heat Method
- - You Can Find Geodesic Paths in Triangle Meshes by Just Flipping Edges
+ - [A concise and provably informative multi‐scale signature based on heat diffusion](http://www.lix.polytechnique.fr/~maks/papers/hks.pdf)
+ - [A Laplacian for Nonmanifold Triangle Meshes](https://www.cs.cmu.edu/~kmcrane/Projects/NonmanifoldLaplace/NonmanifoldLaplace.pdf)
+ - [A Symmetric Objective Function for ICP](https://gfx.cs.princeton.edu/pubs/Rusinkiewicz_2019_ASO/index.php)
+ - [An Adaptive Multi-Grid Solver for Applications in Computer Graphics](https://onlinelibrary.wiley.com/doi/am-pdf/10.1111/cgf.13449)
+ - [Anisotropic geometric diffusion in surface processing](http://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Clarenz00.pdf)
+ - [Appearance Mimicking Surfaces](https://cims.nyu.edu/gcl/papers/mimicking-2014.pdf)
+ - [Biharmonic Distance](https://gfx.cs.princeton.edu/pubs/Lipman_2010_BD/index.php)
+ - [Can Mean-Curvature Flow be Modified to be Non-singular?](http://www.cs.jhu.edu/~misha/MyPapers/SGP12.pdf)
+ - [Complementary Dynamics](https://www.dgp.toronto.edu/projects/complementary-dynamics/complementary-dynamics.pdf)
+ - [Compressed manifold harmonics](https://gvv.mpi-inf.mpg.de/files/CMM14.pdf)
+ - [Compressed vibration modes of elastic bodies](https://research.tudelft.nl/en/publications/compressed-vibration-modes-of-elastic-bodies)
+ - [Cubic Stylization](https://www.dgp.toronto.edu/projects/cubic-stylization/cubicStyle_high.pdf)
+ - [Deep Geometric Texture Synthesis](https://arxiv.org/pdf/2007.00074.pdf)
+ - [Developability of Heightfields via Rank Minimization](http://dgp.toronto.edu/~sgsellan/pdf/compressed-developables-low-res.pdf)
+ - [Diffusion Curves: A Vector Representation for Smooth-Shaded Images](https://maverick.inria.fr/Publications/2008/OBWBTS08/diffusion_curves.pdf)
+ - [Discrete Differential Operators on Polygonal Meshes](https://graphics.pixar.com/library/PolyDDG/paper.pdf)
+ - [Fast Approximation of Laplace-Beltrami Eigenproblems](https://graphics.tudelft.nl/~klaus/papers/fastSpectrum.pdf)
+ - [Gaussian-Product Subdivision Surfaces](https://publik.tuwien.ac.at/files/publik_282850.pdf)
+ - [Harmonic Triangulations](https://dl.acm.org/doi/pdf/10.1145/3306346.3322986)
+ - [Instant Field-Aligned Meshes](https://igl.ethz.ch/projects/instant-meshes/instant-meshes-SA-2015-jakob-et-al-compressed.pdf)
+ - [Interpolated Corrected Curvature Measures for Polygonal Surfaces](https://perso.liris.cnrs.fr/david.coeurjolly/publication/lachaud2020/)
+ - [Laplace Operators for Tetrahedral Meshes](https://igl.ethz.ch/projects/LB3D/LB3D.pdf)
+ - [LSMAT Least Squares Medial Axis Transform](https://arxiv.org/abs/2010.05066)
+ - [Make it stand: balancing shapes for 3D fabrication](https://igl.ethz.ch/projects/make-it-stand/make-it-stand-siggraph-2013-prevost-et-al.pdf)
+ - [Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains](https://www.cs.cmu.edu/~kmcrane/Projects/MonteCarloGeometryProcessing/paper.pdf)
+ - [Packing Irregular Objects in 3D Space via Hybrid Optimization](http://yuexinma.me/zxg_css/SGP_2018_final.pdf)
+ - [Parallel Globally Consistent Normal Orientation of Raw Unorganized Point Clouds](https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.13797)
+ - [Phong Deformation: A Better CO Interpolant for Embedded Deformation](https://graphics.pixar.com/library/PhongDefo/paper.pdf)
+ - [SAL: Sign Agnostic Learning of Shapes from Raw Data](https://arxiv.org/abs/1911.10414)
+ - [Signing the Unsigned: Robust Surface Reconstruction from Raw Pointsets](https://hal.inria.fr/inria-00502473/document)
+ - [Stable Neo-Hookean Flesh Simulation](https://graphics.pixar.com/library/StableElasticity/paper.pdf)
+ - [Stripe Patterns on Surfaces](https://www.cs.cmu.edu/~kmcrane/Projects/StripePatterns/paper.pdf)
+ - [Surface Reconstruction Based on Modified Gauss Formula](https://dl.acm.org/doi/10.1145/3233984)
+ - [Variational Surface Cutting](https://www.cs.cmu.edu/~kmcrane/Projects/VariationalCuts/)
+ - [Vector Heat Method](https://arxiv.org/pdf/1805.09170.pdf)
+ - [You Can Find Geodesic Paths in Triangle Meshes by Just Flipping Edges](https://www.cs.cmu.edu/~kmcrane/Projects/FlipOut/FlipOut.pdf)
 
 
 <!-- 
