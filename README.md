@@ -102,7 +102,7 @@ the particular application.
 | Wednesday, 18/11/2020 | [**Signed distances**](lecture-notes/signed-distance.md), Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> "Signed Distance Computation using the Angle Weighted Pseudo-normal" [Baerentzen & Aanaes 2005] <br> "3D distance fields: a survey of techniques and applications" [Jones et al. 2006] <br> "Robust Inside-Outside Segmentation using Generalized Winding Numbers" [Jacobson et al. 2013]
 | Wednesday, 25/11/2020 | Guest lecture by Hseuh-Ti Derek Liu
 | Wednesday, 02/12/2020 | **Quad meshing**, **Subdivision surfaces**
-| Wednesday, 09/12/2020 | **Constructive solid geometry**, **Voxelization**,  **Subdivision surfaces**, **Mesh decimation, simplification, remeshing** <br> **_libigl-style paper implementation due 12:00 noon ET 09/12/2020_**
+| Wednesday, 09/12/2020 | **Constructive solid geometry**, **Voxelization**,  **Subdivision surfaces**, **Mesh decimation, simplification, remeshing** <br> **_[libigl-style paper implementation](https://github.com/alecjacobson/geometry-processing-libigl-implementations) due 12:00 noon ET 09/12/2020_**
 
 <!--
 > Cutting room floor: **Quad meshing**, **Subdivision surfaces**, **Constructive
@@ -132,7 +132,7 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
 ## Grading
 
 - 73% small assignments (equal weighting per-assignment)
-- 17% libigl-style paper implementation
+- 17% [libigl-style paper implementation](https://github.com/alecjacobson/geometry-processing-libigl-implementations)
 - 10% [Toronto Geometry Colloquium](https://toronto-geometry-colloquium.github.io/) participation
 
 ## Final Paper Implementation
