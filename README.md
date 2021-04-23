@@ -100,7 +100,7 @@ the particular application.
 | Wednesday, 04/11/2020 | [**Curvature & surface analysis**](lecture-notes/curvature.md) Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature Principal curvature, Gauss map, Euler's theorem, shape operator, Gaussian curvature <br> **_[HW 07 assigned](https://github.com/alecjacobson/geometry-processing-curvature),  due 12:00 noon ET 18/11/2020_**
 | Wednesday, 11/11/2020 | **_No Lecture: FAS Reading week._** 
 | Wednesday, 18/11/2020 | [**Signed distances**](lecture-notes/signed-distance.md), Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> "Signed Distance Computation using the Angle Weighted Pseudo-normal" [Baerentzen & Aanaes 2005] <br> "3D distance fields: a survey of techniques and applications" [Jones et al. 2006] <br> "Robust Inside-Outside Segmentation using Generalized Winding Numbers" [Jacobson et al. 2013]
-| Wednesday, 25/11/2020 | Guest lecture by Hseuh-Ti Derek Liu
+| Wednesday, 25/11/2020 | Guest lecture by Hsueh-Ti Derek Liu
 | Wednesday, 02/12/2020 | **Quad meshing**, **Subdivision surfaces**
 | Wednesday, 09/12/2020 | **Constructive solid geometry**, **Voxelization**,  **Subdivision surfaces**, **Mesh decimation, simplification, remeshing** <br> **_[libigl-style paper implementation](https://github.com/alecjacobson/geometry-processing-libigl-implementations) due 12:00 noon ET 09/12/2020_**
 
