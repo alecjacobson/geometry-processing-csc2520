@@ -6,9 +6,10 @@ Fall Term 2022
 CSC419H1 Geometry Processing  
 CSC2520H Geometry Processing  
 Prof. Alec Jacobson  
-TAs, Sarah Kushner, Jiayi Eris Zhang  
-W 3-5 Zoom  
-Office Hours: W 5-6 Zoom
+TAs, Frank Liu, Otman Benchekroun, Samarendra Dash  
+Lecutures: Tuesdays 3-5 [LM 158](https://map.utoronto.ca/?id=1809#!m/494502)  
+Office Hours: Tuesdays 5-5:30, Wednesdays 5-5:30
+Tutorials: Thursdays 4-5 UC 179
 
 The class is aimed at preparing students for working with geometric data via
 understanding fundamental theoretical concepts. Students should have a
