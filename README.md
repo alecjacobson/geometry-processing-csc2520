@@ -2,7 +2,7 @@
 
 ![](images/libigl-teaser.jpg)
 
-Fall Term 2020  
+Fall Term 2022  
 CSC419H1 Geometry Processing  
 CSC2520H Geometry Processing  
 Prof. Alec Jacobson  
@@ -90,19 +90,19 @@ the particular application.
 
 | Lecture Date          | Tentative Topic |
 |:----------------------|:--|
-| Wednesday, 16/09/2020 | [**Geometry Processing Pipeline**](lecture-notes/introduction.md), "life of a shape", shapes, surface representations, <br> _Polygon Mesh Processing_ [Botsch et al. 2008] <br> _**[Intro Survey](https://forms.gle/xvFbFWJqKvfXMT317), due 12:00 noon ET 22/09/2020**_ <br> _**[HW 01 assigned](https://github.com/alecjacobson/geometry-processing-introduction), due 12:00 noon ET 22/09/2020**_
-| Wednesday, 23/09/2020 | [**Representations, Topology vs Geometry**](lecture-notes/mesh-reconstruction.md) tangents and normals, geometry vs. topology, orientability, discrete topology, graphs <br> _**[HW 02 assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), due 12:00 noon ET 02/10/2020**_
-| Wednesday, 30/09/2020 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.md), characteristic function, spatial gradient <br> **_[HW 03 assigned](https://github.com/alecjacobson/geometry-processing-registration), due 12:00 noon ET 10/10/2020_**
-| Wednesday, 07/10/2020 | [**Alignment & registration**](lecture-notes/registration.md) Hausdorff distance, integrated closest point distance<br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Efficient Variants of the ICP Algorithm" [Rusinkiewicz & Levoy 2001] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> point-to-plane distance, iterative closest point, orthogonal Procrustes problem <br> **_[HW 04 assigned](https://github.com/alecjacobson/geometry-processing-smoothing),  due 12:00 noon ET 19/10/2020_**
-| Wednesday, 14/10/2020 | [**Surface fairing & denoising**](lecture-notes/smoothing.md), 1D smoothing flow, 1D energy-based smoothing, PDE, Implicit Time integration <br> **_[HW 05 assigned](https://github.com/alecjacobson/geometry-processing-deformation), tentatively due 12:00 noon ET 27/10/2020_**
-| Wednesday, 21/10/2020 | [**Shape deformation**](lecture-notes/deformation.md), continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible  <br> **_[HW 06 assigned](https://github.com/alecjacobson/geometry-processing-parameterization), due 12:00 noon ET 03/11/2020_** 
-| Wednesday, 28/10/2020 | [**Surface parameterization**](lecture-notes/parameterization-ryan-schmidt.pdf), texture mapping, mass-spring methods, graph drawing, harmonic maps, least squares conformal mapping, local parameterization, discrete exponential map, stroke parameterization <br> **_[Final implementation paper signup assigned](https://forms.gle/QM8nvvxRDQrd4ix6A), due 12:00 noon ET 05/11/2020_** 
-| Wednesday, 04/11/2020 | [**Curvature & surface analysis**](lecture-notes/curvature.md) Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature Principal curvature, Gauss map, Euler's theorem, shape operator, Gaussian curvature <br> **_[HW 07 assigned](https://github.com/alecjacobson/geometry-processing-curvature),  due 12:00 noon ET 18/11/2020_**
-| Wednesday, 11/11/2020 | **_No Lecture: FAS Reading week._** 
-| Wednesday, 18/11/2020 | [**Signed distances**](lecture-notes/signed-distance.md), Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> "Signed Distance Computation using the Angle Weighted Pseudo-normal" [Baerentzen & Aanaes 2005] <br> "3D distance fields: a survey of techniques and applications" [Jones et al. 2006] <br> "Robust Inside-Outside Segmentation using Generalized Winding Numbers" [Jacobson et al. 2013]
-| Wednesday, 25/11/2020 | Guest lecture by Hsueh-Ti Derek Liu
-| Wednesday, 02/12/2020 | Signed distances continued. Outlook into geometry processing research.
-| Wednesday, 09/12/2020 | Video party <br> **_[libigl-style paper implementation](https://github.com/alecjacobson/geometry-processing-libigl-implementations) due 12:00 noon ET 09/12/2020_**
+| Tuesday, 13/09/2022 | [**Geometry Processing Pipeline**](lecture-notes/introduction.md), "life of a shape", shapes, surface representations, <br> _Polygon Mesh Processing_ [Botsch et al. 2008] <br> _**[Intro Survey](https://forms.gle/S4EofeYBD2DyKyKu6), due 12:00 noon ET 20/09/2022**_ <br> _**[HW 01 assigned](https://github.com/alecjacobson/geometry-processing-introduction), due 12:00 noon ET 20/09/2022**_
+| Tuesday, 20/09/2022 | [**Representations, Topology vs Geometry**](lecture-notes/mesh-reconstruction.md) tangents and normals, geometry vs. topology, orientability, discrete topology, graphs <br> _**[HW 02 assigned](https://github.com/alecjacobson/geometry-processing-mesh-reconstruction), due TBD**_
+| Tuesday, 27/09/2022 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.md), characteristic function, spatial gradient <br> **_[HW 03 assigned](https://github.com/alecjacobson/geometry-processing-registration), due TBD_**
+| Tuesday, 04/10/2022 | [**Alignment & registration**](lecture-notes/registration.md) Hausdorff distance, integrated closest point distance<br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Efficient Variants of the ICP Algorithm" [Rusinkiewicz & Levoy 2001] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> point-to-plane distance, iterative closest point, orthogonal Procrustes problem <br> **_[HW 04 assigned](https://github.com/alecjacobson/geometry-processing-smoothing),  due TBD**
+| Tuesday, 11/10/2022 | [**Surface fairing & denoising**](lecture-notes/smoothing.md), 1D smoothing flow, 1D energy-based smoothing, PDE, Implicit Time integration <br> **_[HW 05 assigned](https://github.com/alecjacobson/geometry-processing-deformation), tentatively due TBD_**
+| Tuesday, 18/10/2022 | [**Shape deformation**](lecture-notes/deformation.md), continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible  <br> **_[HW 06 assigned](https://github.com/alecjacobson/geometry-processing-parameterization), due TBD_** 
+| Tuesday, 25/10/2022 | [**Surface parameterization**](lecture-notes/parameterization-ryan-schmidt.pdf), texture mapping, mass-spring methods, graph drawing, harmonic maps, least squares conformal mapping, local parameterization, discrete exponential map, stroke parameterization <br> **_[Final implementation paper signup assigned](https://forms.gle/QM8nvvxRDQrd4ix6A), due TBD_** 
+| Tuesday, 01/11/2022 | [**Curvature & surface analysis**](lecture-notes/curvature.md) Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature Principal curvature, Gauss map, Euler's theorem, shape operator, Gaussian curvature <br> **_[HW 07 assigned](https://github.com/alecjacobson/geometry-processing-curvature),  due TBD_**
+| Tuesday, 08/11/2022 | **_No Lecture: FAS Reading week._** 
+| Tuesday, 15/11/2022 | [**Signed distances**](lecture-notes/signed-distance.md), Offset surfaces, inside-outside segmentation, medial axis, isosurface/level sets, signed distances to polyhedra, parity counting, winding number <br> "Signed Distance Computation using the Angle Weighted Pseudo-normal" [Baerentzen & Aanaes 2005] <br> "3D distance fields: a survey of techniques and applications" [Jones et al. 2006] <br> "Robust Inside-Outside Segmentation using Generalized Winding Numbers" [Jacobson et al. 2013]
+| Tuesday, 22/11/2022 | Guest lecture by Hsueh-Ti Derek Liu
+| Tuesday, 29/12/2022 | Signed distances continued. Outlook into geometry processing research.
+| Tuesday, 06/12/2022 | Video party <br> **_[libigl-style paper implementation](https://github.com/alecjacobson/geometry-processing-libigl-implementations) due TBD_**
 
 
 > Cutting room floor: **Quad meshing**, **Subdivision surfaces**, **Constructive
@@ -137,7 +137,7 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
 
 ## Final Paper Implementation
 
-[Sign up by 12 noon 05/11/2020](https://forms.gle/QM8nvvxRDQrd4ix6A)
+[Sign up by 12 noon 05/11/2022](https://forms.gle/QM8nvvxRDQrd4ix6A)
 
  - [A concise and provably informative multi‐scale signature based on heat diffusion](http://www.lix.polytechnique.fr/~maks/papers/hks.pdf)
  - [A Laplacian for Nonmanifold Triangle Meshes](https://www.cs.cmu.edu/~kmcrane/Projects/NonmanifoldLaplace/NonmanifoldLaplace.pdf)
@@ -159,7 +159,7 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
  - [Gaussian-Product Subdivision Surfaces](https://publik.tuwien.ac.at/files/publik_282850.pdf)
  - [Harmonic Triangulations](https://dl.acm.org/doi/pdf/10.1145/3306346.3322986)
  - [Instant Field-Aligned Meshes](https://igl.ethz.ch/projects/instant-meshes/instant-meshes-SA-2015-jakob-et-al-compressed.pdf)
- - [Interpolated Corrected Curvature Measures for Polygonal Surfaces](https://perso.liris.cnrs.fr/david.coeurjolly/publication/lachaud2020/)
+ - [Interpolated Corrected Curvature Measures for Polygonal Surfaces](https://perso.liris.cnrs.fr/david.coeurjolly/publication/lachaud2022/)
  - [Laplace Operators for Tetrahedral Meshes](https://igl.ethz.ch/projects/LB3D/LB3D.pdf)
  - [LSMAT Least Squares Medial Axis Transform](https://arxiv.org/abs/2010.05066)
  - [Make it stand: balancing shapes for 3D fabrication](https://igl.ethz.ch/projects/make-it-stand/make-it-stand-siggraph-2013-prevost-et-al.pdf)
