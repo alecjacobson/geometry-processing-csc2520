@@ -41,6 +41,10 @@ week's topic. Students will **_read academic papers_** and complete a
 small **_weekly_** programming assignment to implement a corresponding
 algorithm.
 
+Through attendence of invited Toronto Geometry talks, students will be exposed to a wide variety of cutting-edge research in geometry processing.
+
+Students sharpen crystalize their knowledge and sharpen their presentation skills by creating short explainer videos for geometry processing concepts.
+
 <!-- Through the **_weekly_** seminars at the [Toronto Geometry
 Colloquium](https://toronto-geometry-colloquium.github.io/), students will be
 exposed to a wide variety of cutting-edge research in geometry processing.-->
@@ -137,7 +141,7 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
 
 - 73% small assignments (equal weighting per-assignment)
 - 18% [libigl-style paper implementation](https://github.com/alecjacobson/geometry-processing-libigl-implementations)
-- 9% explainer videos
+- 9% explainer videos, seminar attendance
 
 ## Final Paper Implementation
 
