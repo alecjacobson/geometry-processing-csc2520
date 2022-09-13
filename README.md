@@ -143,6 +143,25 @@ Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, and Bruno Levy, 2008.
 - 18% [libigl-style paper implementation](https://github.com/alecjacobson/geometry-processing-libigl-implementations)
 - 9% explainer videos, seminar attendance
 
+## Explainer Videos
+
+An explainer is a short (< 4m minutes) video provides an introduction to or a summary of a topic. Using motion graphics, animation and/or narration, create a compelling video.
+
+Upload the video on youtube. Be sure to include links to an videos or source material that you took inspiration from in your video description. Post a link on the discord channel. 
+
+Over the course of the semester you must create _**3 unique videos**_ for any of the topics introduced in the lecture, homeworks or linked readings. 
+
+### Examples
+
+- [Dirac Belt Trick](https://www.youtube.com/watch?v=JDJKfs3HqRg)
+- [Sphere Eversion](https://www.youtube.com/watch?v=OI-To1eUtuU)
+- [Punctured Torus Eversion](https://www.youtube.com/watch?v=q0Y-qjXLslM)
+- [Mathematical Magic: Undoing Handcuffs](https://www.youtube.com/watch?v=wDZx9B4TAXo)
+- [Euler's Formula V - E + F = 2 | Proof](https://www.youtube.com/watch?v=80EazC2_0Qo)
+- [Delaunay Triangulation](https://www.youtube.com/watch?v=NcAKzVoFbVI)
+- [Voronoi diagrams](https://www.youtube.com/watch?v=Q804hv73L6U)
+
+
 ## Final Paper Implementation
 
 Tentative list of papers:
