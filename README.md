@@ -149,7 +149,7 @@ An explainer is a short (< 4m minutes) video provides an introduction to or a su
 
 Upload the video on youtube. Be sure to include links to an videos or source material that you took inspiration from in your video description. Post a link on the discord channel. 
 
-Over the course of the semester you must create _**2 unique videos**_ for any of the topics introduced in the lecture, homeworks or linked readings. It's recommended that you make _**1 30-sec TikTok style video**_ that's over the top exciting and for a general audience. And _**1 4- min youtube-style video**_ where you explain a bit more than just hype.
+Over the course of the semester you must create _**two unique videos**_ for any of the topics introduced in the lecture, homeworks or linked readings. It's recommended that you make _**one 30-sec TikTok style video**_ that's over the top exciting and for a general audience. And _**one 4-min youtube-style video**_ where you explain a bit more than just hype.
 
 ### Examples
 
