@@ -8,7 +8,7 @@ CSC2520H Geometry Processing
 Prof. Alec Jacobson  
 TAs, Frank Liu, Otman Benchekroun, Samarendra Dash  
 Lecutures: Tuesdays 3-5 [LM 158](https://map.utoronto.ca/?id=1809#!m/494502)  
-Office Hours: Tuesdays 5-5:30, Wednesdays 5-5:30
+Office Hours: Tuesdays 5-5:30, Wednesdays 5-5:30  
 Tutorials: Thursdays 4-5 UC 179
 
 The class is aimed at preparing students for working with geometric data via
