@@ -39,9 +39,12 @@ animation.
 In lecture we will cover the mathematical background and visual intuition of the
 week's topic. Students will **_read academic papers_** and complete a
 small **_weekly_** programming assignment to implement a corresponding
-algorithm. Through the **_weekly_** seminars at the [Toronto Geometry
+algorithm.
+
+<!-- Through the **_weekly_** seminars at the [Toronto Geometry
 Colloquium](https://toronto-geometry-colloquium.github.io/), students will be
-exposed to a wide variety of cutting-edge research in geometry processing.
+exposed to a wide variety of cutting-edge research in geometry processing.-->
+
 Finally, students will implement a recent paper in the style of a [libigl
 tutorial](https://libigl.github.io/tutorial/).
 
