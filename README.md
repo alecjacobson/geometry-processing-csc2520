@@ -119,7 +119,7 @@ the particular application.
 
 ## Discord
 
-https://discord.gg/swMZ92H
+https://discord.gg/j7auSYUC
 
 ## Lateness Policy
 
