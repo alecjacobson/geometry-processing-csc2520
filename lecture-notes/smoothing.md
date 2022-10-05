@@ -1,8 +1,5 @@
 # [Geometry Processing](../index.html) – Smoothing
 
-## Guest lecture next week
-
-[Ryan Schmidt](http://www.rms80.com)
 
 ## Wikipedia progress?
 
