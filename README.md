@@ -190,7 +190,7 @@ Tentative list of papers:
  - [Laplace Operators for Tetrahedral Meshes](https://igl.ethz.ch/projects/LB3D/LB3D.pdf)
  - [Learning Smooth Neural Functions via Lipschitz Regularization](https://www.dgp.toronto.edu/~hsuehtil/pdf/lipmlp.pdf)
  - [Make it stand: balancing shapes for 3D fabrication](https://igl.ethz.ch/projects/make-it-stand/make-it-stand-siggraph-2013-prevost-et-al.pdf)
- - [Neural Jacobian Fields: Learning Intrinsic Mappings of Arbitrary Meshes
+ - [Neural Jacobian Fields: Learning Intrinsic Mappings of Arbitrary Meshes](https://arxiv.org/pdf/2205.02904.pdf)
  - [Parallel Globally Consistent Normal Orientation of Raw Unorganized Point Clouds](https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.13797)
  - [Phong Deformation: A Better CO Interpolant for Embedded Deformation](https://graphics.pixar.com/library/PhongDefo/paper.pdf)
  - [Repulsive Curves](https://www.cs.cmu.edu/~kmcrane/Projects/RepulsiveCurves/RepulsiveCurves.pdf)
