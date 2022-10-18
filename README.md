@@ -103,7 +103,8 @@ the particular application.
 | Tuesday, 27/09/2022 | [**Acquisition & reconstruction**](lecture-notes/mesh-reconstruction.md), characteristic function, spatial gradient <br> **_[HW 03 assigned](https://github.com/alecjacobson/geometry-processing-registration), due 12:00 noon 05/10/2022_**
 | Tuesday, 04/10/2022 | [**Alignment & registration**](lecture-notes/registration.md) Hausdorff distance, integrated closest point distance<br> "Object modelling by registration of multiple range images" [Chen & Medioni 1991] <br> "A method for registration of 3-D shapes" [Besl & McKay 1992] <br> "Efficient Variants of the ICP Algorithm" [Rusinkiewicz & Levoy 2001] <br> "Sparse Iterative Closest Point" [Bouaziz et al. 2013] <br> point-to-plane distance, iterative closest point, orthogonal Procrustes problem <br> **_[HW 04 assigned](https://github.com/alecjacobson/geometry-processing-smoothing),  due 12:00 noon 14/10/2022_**
 | Tuesday, 11/10/2022 | [**Surface fairing & denoising**](lecture-notes/smoothing.md), 1D smoothing flow, 1D energy-based smoothing, PDE, Implicit Time integration <br> **_[HW 05 assigned](https://github.com/alecjacobson/geometry-processing-deformation), due 12:00 noon 21/10/2022_**
-| Tuesday, 18/10/2022 | [**Shape deformation**](lecture-notes/deformation.md), continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible  <br> **_[HW 06 assigned](https://github.com/alecjacobson/geometry-processing-parameterization), due 12:00 noon 28/10/2022_** 
+| Tuesday, 18/10/2022 | [**Shape deformation**](lecture-notes/deformation.md), continuous deformation, pointwise mappings, energy-based model, handle-based deformation, local distortion mesure, gradient-based distortion, Laplacian-based distortion, as-rigid-as-possible  <br> **_[HW 06 assigned](https://github.com/alecjacobson/geometry-processing-parameterization), due 12:00 noon 28/10/2022_** <br>
+[Final Paper Implementation Paper Selection Form](https://forms.gle/w1fmaRWAG52mVNp88), due 12:00 noon 28/10/2022_**
 | Tuesday, 25/10/2022 | [**Surface parameterization**](lecture-notes/parameterization-ryan-schmidt.pdf), texture mapping, mass-spring methods, graph drawing, harmonic maps, least squares conformal mapping, local parameterization, discrete exponential map, stroke parameterization <br> **_[Final implementation paper signup assigned](https://forms.gle/QM8nvvxRDQrd4ix6A), due TBD_** 
 | Tuesday, 01/11/2022 | [**Curvature & surface analysis**](lecture-notes/curvature.md) Planar curves, tangents, arc-length parameterization, osculating circle, curvature, turning number theorem, discrete curvature, normal curvature, minimum/maximum/mean curvature Principal curvature, Gauss map, Euler's theorem, shape operator, Gaussian curvature <br> **_[HW 07 assigned](https://github.com/alecjacobson/geometry-processing-curvature),  due TBD_**
 | Tuesday, 08/11/2022 | **_No Lecture: FAS Reading week._** 
@@ -168,43 +169,40 @@ Got other great examples? Submit a PR on this README.md with a link!
 
 Tentative list of papers:
 
- - [A concise and provably informative multi‐scale signature based on heat diffusion](http://www.lix.polytechnique.fr/~maks/papers/hks.pdf)
  - [A Laplacian for Nonmanifold Triangle Meshes](https://www.cs.cmu.edu/~kmcrane/Projects/NonmanifoldLaplace/NonmanifoldLaplace.pdf)
- - [A Symmetric Objective Function for ICP](https://gfx.cs.princeton.edu/pubs/Rusinkiewicz_2019_ASO/index.php)
- - [An Adaptive Multi-Grid Solver for Applications in Computer Graphics](https://onlinelibrary.wiley.com/doi/am-pdf/10.1111/cgf.13449)
+ - [A concise and provably informative multi‐scale signature based on heat diffusion](http://www.lix.polytechnique.fr/~maks/papers/hks.pdf)
  - [Anisotropic geometric diffusion in surface processing](http://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Clarenz00.pdf)
  - [Appearance Mimicking Surfaces](https://cims.nyu.edu/gcl/papers/mimicking-2014.pdf)
- - [Biharmonic Distance](https://gfx.cs.princeton.edu/pubs/Lipman_2010_BD/index.php)
  - [Can Mean-Curvature Flow be Modified to be Non-singular?](http://www.cs.jhu.edu/~misha/MyPapers/SGP12.pdf)
  - [Complementary Dynamics](https://www.dgp.toronto.edu/projects/complementary-dynamics/complementary-dynamics.pdf)
  - [Compressed manifold harmonics](https://gvv.mpi-inf.mpg.de/files/CMM14.pdf)
  - [Compressed vibration modes of elastic bodies](https://research.tudelft.nl/en/publications/compressed-vibration-modes-of-elastic-bodies)
- - [Cubic Stylization](https://www.dgp.toronto.edu/projects/cubic-stylization/cubicStyle_high.pdf)
  - [Deep Geometric Texture Synthesis](https://arxiv.org/pdf/2007.00074.pdf)
  - [Developability of Heightfields via Rank Minimization](http://dgp.toronto.edu/~sgsellan/pdf/compressed-developables-low-res.pdf)
- - [Diffusion Curves: A Vector Representation for Smooth-Shaded Images](https://maverick.inria.fr/Publications/2008/OBWBTS08/diffusion_curves.pdf)
- - [Discrete Differential Operators on Polygonal Meshes](https://graphics.pixar.com/library/PolyDDG/paper.pdf)
+ - [Dynamic Kelvinlets: Secondary Motions based on Fundamental Solutions of Elastodynamics](https://graphics.pixar.com/library/DynaKelvinlets/paper.pdf)
  - [Fast Approximation of Laplace-Beltrami Eigenproblems](https://graphics.tudelft.nl/~klaus/papers/fastSpectrum.pdf)
+ - [Fast Quasi-Harmonic Weights for Geometric Data Interpolation](https://people.csail.mit.edu/jsolomon/assets/quasiharmonic.pdf)
+ - [Fast and Robust QEF Minimization using Probabilistic Quadrics](https://graphics.rwth-aachen.de/media/papers/308/probabilistic-quadrics.pdf)
  - [Gaussian-Product Subdivision Surfaces](https://publik.tuwien.ac.at/files/publik_282850.pdf)
  - [Harmonic Triangulations](https://dl.acm.org/doi/pdf/10.1145/3306346.3322986)
- - [Instant Field-Aligned Meshes](https://igl.ethz.ch/projects/instant-meshes/instant-meshes-SA-2015-jakob-et-al-compressed.pdf)
+ - [Instant Neural Graphics Primitives with a Multiresolution Hash Encoding](https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf)
  - [Interpolated Corrected Curvature Measures for Polygonal Surfaces](https://perso.liris.cnrs.fr/david.coeurjolly/publication/lachaud2022/)
- - [Laplace Operators for Tetrahedral Meshes](https://igl.ethz.ch/projects/LB3D/LB3D.pdf)
  - [LSMAT Least Squares Medial Axis Transform](https://arxiv.org/abs/2010.05066)
+ - [Laplace Operators for Tetrahedral Meshes](https://igl.ethz.ch/projects/LB3D/LB3D.pdf)
+ - [Learning Smooth Neural Functions via Lipschitz Regularization](https://www.dgp.toronto.edu/~hsuehtil/pdf/lipmlp.pdf)
  - [Make it stand: balancing shapes for 3D fabrication](https://igl.ethz.ch/projects/make-it-stand/make-it-stand-siggraph-2013-prevost-et-al.pdf)
- - [Monte Carlo Geometry Processing: A Grid-Free Approach to PDE-Based Methods on Volumetric Domains](https://www.cs.cmu.edu/~kmcrane/Projects/MonteCarloGeometryProcessing/paper.pdf)
- - [Packing Irregular Objects in 3D Space via Hybrid Optimization](http://yuexinma.me/zxg_css/SGP_2018_final.pdf)
+ - [Neural Jacobian Fields: Learning Intrinsic Mappings of Arbitrary Meshes
  - [Parallel Globally Consistent Normal Orientation of Raw Unorganized Point Clouds](https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.13797)
  - [Phong Deformation: A Better CO Interpolant for Embedded Deformation](https://graphics.pixar.com/library/PhongDefo/paper.pdf)
+ - [Repulsive Curves](https://www.cs.cmu.edu/~kmcrane/Projects/RepulsiveCurves/RepulsiveCurves.pdf)
  - [SAL: Sign Agnostic Learning of Shapes from Raw Data](https://arxiv.org/abs/1911.10414)
  - [Signing the Unsigned: Robust Surface Reconstruction from Raw Pointsets](https://hal.inria.fr/inria-00502473/document)
  - [Stable Neo-Hookean Flesh Simulation](https://graphics.pixar.com/library/StableElasticity/paper.pdf)
- - [Stripe Patterns on Surfaces](https://www.cs.cmu.edu/~kmcrane/Projects/StripePatterns/paper.pdf)
  - [Surface Reconstruction Based on Modified Gauss Formula](https://dl.acm.org/doi/10.1145/3233984)
  - [Variational Surface Cutting](https://www.cs.cmu.edu/~kmcrane/Projects/VariationalCuts/)
  - [Vector Heat Method](https://arxiv.org/pdf/1805.09170.pdf)
  - [You Can Find Geodesic Paths in Triangle Meshes by Just Flipping Edges](https://www.cs.cmu.edu/~kmcrane/Projects/FlipOut/FlipOut.pdf)
-
+](https://arxiv.org/pdf/2205.02904.pdf)
 
 <!-- 
 cat header.md README.md | multimarkdown --process-html -o README.html && open README.html
