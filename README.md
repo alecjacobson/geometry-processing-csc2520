@@ -166,7 +166,7 @@ Got other great examples? Submit a PR on this README.md with a link!
 
 ## Final Paper Implementation
 
-Tentative list of papers:
+Curated list of papers:
 
  - [A Laplacian for Nonmanifold Triangle Meshes](https://www.cs.cmu.edu/~kmcrane/Projects/NonmanifoldLaplace/NonmanifoldLaplace.pdf)
  - [A concise and provably informative multi‐scale signature based on heat diffusion](http://www.lix.polytechnique.fr/~maks/papers/hks.pdf)
