@@ -111,7 +111,7 @@ the particular application.
 | _Wednesday, 16/11/2022_ | _[Last day to drop course](https://www.artsci.utoronto.ca/current/dates-deadlines/academic-dates#academic-dates-deadlines-accordion-7)_
 | Tuesday, 22/11/2022 | TBD
 | Tuesday, 29/12/2022 | Signed distances continued. Outlook into geometry processing research.
-| Tuesday, 06/12/2022 | Video party <br> **_[libigl-style paper implementation](https://github.com/alecjacobson/geometry-processing-libigl-implementations) due TBD_**
+| Tuesday, 06/12/2022 | Video party <br> **_[libigl-style paper implementation](https://github.com/alecjacobson/geometry-processing-libigl-implementations) due 5/12/2022_**
 
 
 > Cutting room floor: **Quad meshing**, **Subdivision surfaces**, **Constructive
